@@ -252,12 +252,5 @@ const contactPage = ({ t }) => {
 
 contactPage.Layout = LayoutContact;
 
-/*contactPage.getInitialProps = async () => ({
-    namespacesRequired: ['common', 'footer'],
-})
-
-contactPage.propTypes = {
-    t: PropTypes.func.isRequired,
-}*/
 
 export default withTranslation('common')(contactPage)

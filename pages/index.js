@@ -326,12 +326,5 @@ const Homepage = ({ t }) => {
 
 Homepage.Layout = LayoutGeosophy
 
-/*Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'footer'],
-})
-
-Homepage.propTypes = {
-  t: PropTypes.func.isRequired,
-}*/
 
 export default withTranslation('common')(Homepage)

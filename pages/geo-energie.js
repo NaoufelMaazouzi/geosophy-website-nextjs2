@@ -339,12 +339,5 @@ const geoenergiePage = ({ t }) => {
 
 geoenergiePage.Layout = LayoutGeoenergie;
 
-/*geoenergiePage.getInitialProps = async () => ({
-    namespacesRequired: ['common', 'footer', 'geo-energie'],
-})
-
-geoenergiePage.propTypes = {
-    t: PropTypes.func.isRequired,
-}*/
 
 export default withTranslation('geo-energie')(geoenergiePage)

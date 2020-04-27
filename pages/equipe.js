@@ -544,12 +544,5 @@ const equipePage = ({ t }) => {
 
 equipePage.Layout = LayoutEquipe;
 
-/*equipePage.getInitialProps = async () => ({
-    namespacesRequired: ['common', 'footer', 'equipe'],
-})
-
-equipePage.propTypes = {
-    t: PropTypes.func.isRequired,
-}*/
 
 export default withTranslation('equipe')(equipePage)
