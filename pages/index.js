@@ -35,7 +35,7 @@ const Homepage = ({ t }) => {
           </div>
           <div className="div-call-action">
             <h3 className="title-call-action">{t('main.analyser')}</h3>
-            <a href="https://app.geosophy.io/auth/login" className="button blueButton">{t('main.essaiButton')}</a>
+            <a href="https://app.geosophy.io/auth/login" target="_blank" className="button blueButton">{t('main.essaiButton')}</a>
           </div>
         </section>
         <section className="references-section">
@@ -324,7 +324,7 @@ const Homepage = ({ t }) => {
   )
 }
 
-Homepage.Layout = LayoutGeosophy
+Homepage.Layout = LayoutGeosophy;
 
 
 export default withTranslation('common')(Homepage)

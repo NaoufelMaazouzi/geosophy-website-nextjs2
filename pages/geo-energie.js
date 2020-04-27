@@ -77,7 +77,7 @@ const geoenergiePage = ({ t }) => {
                     </div>
                     <div className="div-call-action">
                         <h3 className="title-call-action" id="analyser">{t('analyser')}</h3>
-                        <a href="https://app.geosophy.io/auth/login" className="button greenButton" id="essaiButton">{t('essaiButton')}</a>
+                        <a href="https://app.geosophy.io/auth/login" target="_blank" className="button greenButton" id="essaiButton">{t('essaiButton')}</a>
                     </div>
                 </section>
             </main>
