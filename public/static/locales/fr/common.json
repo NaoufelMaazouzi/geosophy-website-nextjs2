@@ -1,0 +1,24 @@
+{
+    "navbar": {
+        "geoenergie": "Géo-énergie",
+        "equipe": "Equipe",
+        "connexion": "Connexion"
+    },
+    "header": {
+        "slogan": "L'énergie propre à portée de main.",
+        "slogan2": "Juste sous nos pieds.",
+        "sloganSubhead": "Révélez toute la valeur de votre foncier"
+    },
+    "main": {
+        "titre1Index": "Géo-énergisez vos bâtiments",
+        "geoenergisez": "Vous souhaitez valoriser votre patrimoine immobilier, maîtriser sa consommation en lui assurant un approvisionnement local pour son confort thermique ou accompagner vos clients dans cette démarche ?",
+        "geoenergisez2": "Que vous soyez développeur de projet ou propriétaire de bâtiment, entreprise ou collectivité, mettez à profit l’énergie décarbonée de votre sous-sol : la géo-énergie.",
+        "headbandHook": "Une énergie renouvelable, locale et décarbonée pour des bâtiments résilients.",
+        "titreIndex2": "Evaluez votre capital géo-énergétique",
+        "textLogiciel1": "Pour booster votre projet et identifier les sites les plus prometteurs, Geosophy vous propose son logiciel de simulation.",
+        "textLogiciel2": "À partir d’une simple adresse, il détermine pour chaque localisation les ressources souterraines disponibles, les met en lien avec les besoins du bâtiment et la possibilité de forer. Il calcule ensuite les revenus énergétiques, les coûts d’investissement ainsi que la valorisation immobilière des installations géo-énergétiques.",
+        "confianceTitle": "Ils nous font confiance !",
+        "analyser": "Vous voulez analyser votre foncier gratuitement ?",
+        "essaiButton": "Essai gratuit"
+    }
+}

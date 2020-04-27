@@ -1,204 +1,337 @@
-import Head from 'next/head'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { i18n, Link, withTranslation } from '../i18n';
 
-export default function Home() {
+import logoCovivio from '../public/covivio2.png';
+import logoIcade from '../public/icade.png';
+import logoUnion from '../public/Union-Investment.png';
+import logoLamotte from '../public/lamotte.png';
+import logoCovea from '../public/covea.png';
+import logoFrancaise from '../public/La-Francaise-logo.png';
+import headBand from '../public/Bandeau-Geosophy2.jpg';
+import LayoutGeosophy from '../components/layoutGeosophy';
+
+
+
+const Homepage = ({ t }) => {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <React.Fragment>
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with ZEIT Now.
-            </p>
-          </a>
-        </div>
+        <section id="presentation-section">
+          <h2 className="title-section">{t('main.titre1Index')}</h2>
+          <div className="div-text-subhead">
+            <p className="first-text-subhead">{t('main.geoenergisez')}</p>
+            <p className="second-text-subhead">{t('main.geoenergisez2')}</p>
+          </div>
+        </section>
+        <section className="headband-section">
+          <p className="headband-hook">{t('main.headbandHook')}</p>
+        </section>
+        <section className="call-action-section">
+          <h2 className="title-section">{t('main.titreIndex2')}</h2>
+          <div className="div-text-subhead">
+            <p className="first-text-subhead">{t('main.textLogiciel1')}</p>
+            <p className="second-text-subhead">{t('main.textLogiciel2')}</p>
+          </div>
+          <div className="div-call-action">
+            <h3 className="title-call-action">{t('main.analyser')}</h3>
+            <a href="https://app.geosophy.io/auth/login" className="button blueButton">{t('main.essaiButton')}</a>
+          </div>
+        </section>
+        <section className="references-section">
+          <div className="div-call-action">
+            <h2 className="title-call-action">{t('main.confianceTitle')}</h2>
+          </div>
+          <div className="slider">
+            <div className="slide">
+              <img src={logoIcade} />
+              <img src={logoCovea} />
+              <img src={logoUnion} />
+              <img src={logoCovivio} />
+              <img src={logoLamotte} />
+              <img src={logoFrancaise} />
+            </div>
+            <div className="slide">
+              <img src={logoIcade} />
+              <img src={logoCovea} />
+              <img src={logoUnion} />
+              <img src={logoCovivio} />
+              <img src={logoLamotte} />
+              <img src={logoFrancaise} />
+            </div>
+          </div>
+        </section>
       </main>
-
-      <footer>
-        <a
-          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-        </a>
-      </footer>
-
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
+        /***************************************** PRESENTATION SECTION *****************************************/
+
+        #presentation-section {
+          display: -webkit-box;
           display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
           flex-direction: column;
-          justify-content: center;
+          -webkit-box-align: center;
           align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
+          -webkit-box-pack: center;
           justify-content: center;
-          align-items: center;
         }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
+        
+        .title-section {
+          font-size: 3rem;
+          padding-top: 5%;
+          position: relative;
           text-align: center;
+          font-family: bahnschrift;
+          font-weight: 400;
+          width: 100%;
+        }
+        
+        .title-section::after {
+          content: "";
+          width: 120px;
+          height: 3px;
+          background: black;
+          border-radius: 12px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0 auto;
+          -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+        }
+        
+        .div-text-subhead {
+          width: 70%;
+          margin-top: 5%;
+          margin-bottom: 8%;
+          text-align: center;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+          color: #4a4a4a;
+        }
+        
+        .first-text-subhead,
+        .second-text-subhead {
+          font-size: 1.3rem;
+        }
+        
+        .second-text-subhead {
+          margin-top: 5%;
+        }
+        
+        /***************************************** HEADBAND SECTION*****************************************/
+        
+        .headband-section {
+          background-image: url(${headBand});
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 80vh;
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+        }
+        
+        .headband-hook {
+          text-align: center;
+          font-size: 4rem;
+          color: white;
+          font-family: bahnschrift;
+          font-weight: 700;
+          margin: 5% 5%;
+        }
+        
+        /***************************************** CALL TO ACTION SECTION *****************************************/
+        
+        .call-action-section {
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          flex-direction: column;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+        }
+        
+        .div-call-action {
+          text-align: center;
+          width: 80%;
+          margin-top: 5%;
+        }
+        
+        .title-call-action {
+          font-size: 2rem;
+          text-align: center;
+          padding-bottom: 3%;
+          font-family: "Red Hat Display", sans-serif;
+        }
+        
+        .button {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          margin-bottom: 5%;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 4px;
+          margin-bottom: 5%;
+          display: inline-block;
+        }
+        
+        .blueButton {
+          background-color: #57b1dd;
+          transition: all 0.3s ease;
+        }
+        
+        .blueButton:hover {
+          background-color: #2c92c5;
+        }
+        
+        .greenButton {
+          background-color: #7bd444;
+          transition: all 0.3s ease;
+        }
+        
+        .greenButton:hover {
+          background-color: #549e25;
+        }
+        
+        /***************************************** REFERENECES SECTION *****************************************/
+        
+        .references-section {
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          flex-direction: row;
+          -webkit-box-align: center;
+          align-items: center;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin-top: 5%;
+          margin-bottom: 10%;
+          /*background-color: #f5f5f5;*/
+        }
+        
+        .slider {
+          width: 80%;
+          height: 100px;
+          position: relative;
+          background: white;
+          display: flex;
+          overflow: hidden;
         }
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
+        .slide {
+          height: 100px;
           display: flex;
           align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
+          animation: slideshow 40s linear infinite;
         }
 
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
+        .slide img {
+          height: 70px;
+          padding: 0 50px 0 50px;
         }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
+        
+        @keyframes slideshow {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
           }
         }
-      `}</style>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+        .slider::before,
+        .slider::after {
+          height: 100px;
+          width: 200px;
+          position: absolute;
+          content: "";
+          background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+          z-index: 2;
         }
 
-        * {
-          box-sizing: border-box;
+        .slider::before {
+          left: 0;
+          top: 0;
         }
+        
+        .slider::after {
+          right: 0;
+          top: 0;
+          transform: rotateZ(180deg);
+        }
+
+        @media (max-width: 420px) { 
+          /* Presentation section */
+            .div-text-subhead {
+              margin-top: 15%;
+              margin-bottom: 15%;
+            }
+
+          /* Call to action section */
+            .div-call-action {
+              margin: 5% 5%;
+            }
+      }
+
+      @media (max-width: 768px) { 
+          /* Presentation section */
+      .first-text-subhead,
+      .second-text-subhead {
+        font-size: 2.4rem;
+        text-align: justify;
+      }
+
+      /* References section */
+      .div-img {
+        width: 40%;
+        margin-top: 10%;
+      }
+
+      .slide img {
+        height: 30px;
+        padding: 0 30px 0 30px;
+      }
+
+      .slide {
+        animation: slideshow 20s linear infinite;
+      }
+
+      .slider::before,
+      .slider::after {
+        width: 100px;
+      }
+}
       `}</style>
-    </div>
+    </React.Fragment>
   )
 }
+
+Homepage.Layout = LayoutGeosophy
+
+/*Homepage.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'footer'],
+})
+
+Homepage.propTypes = {
+  t: PropTypes.func.isRequired,
+}*/
+
+export default withTranslation('common')(Homepage)
