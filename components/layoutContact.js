@@ -1,12 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import Navbar from './navbar';
+import Head from 'next/head';
 import BandeauContact from '../public/Bandeau-contact-min.jpg';
 
 
 const LayoutContact = ({ children }) => {
   return (
-    <div>
+    <React.Fragment>
+      <Head>
+        {/*<link rel="canonical" href="https://example.com" />*/}
+        <title>Contact</title>
+      </Head>
       <header className="contact">
         <Navbar />
       </header>
@@ -60,7 +65,7 @@ display: flex;
 flex-direction: column;
 }
       `}</style>
-    </div>
+    </React.Fragment>
   )
 }
 

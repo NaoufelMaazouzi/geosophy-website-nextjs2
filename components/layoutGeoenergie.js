@@ -2,14 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Navbar from './navbar';
 import Footer from './footer';
+import Head from 'next/head';
 import BandeauGeoenergie from '../public/Bandeau-géonergie-min.jpg';
 
 
 const LayoutGeoenergie = ({ children }) => {
   return (
-    <div>
+    <React.Fragment>
+      <Head>
+        {/*<link rel="canonical" href="https://example.com" />*/}
+        <title>Géo-énergie</title>
+      </Head>
       <header className="geo-energie">
-        <Navbar />
+        <Navbar linkId2="link" />
       </header>
       {children}
       <Footer />
@@ -62,7 +67,7 @@ display: flex;
 flex-direction: column;
 }
       `}</style>
-    </div>
+    </React.Fragment>
   )
 }
 

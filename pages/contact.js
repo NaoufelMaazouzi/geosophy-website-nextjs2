@@ -17,17 +17,17 @@ const contactPage = ({ t }) => {
     <React.Fragment>
       <main>
         <section id="contact-section">
-          <h2 className="title-section" id="title-cyan">Une question ? N'hésitez pas à nous contacter !</h2>
+          <h2 className="title-section" id="title-cyan">{t('question')}</h2>
           <div className="div-contact-form">
             <div className="message">
-              <h4 className="title-message">Envoyez-nous un message !</h4>
+              <h4 className="title-message">{t('envoiMessage')}</h4>
               <form id="contact-form" method="POST" action="../php/contact-form-handle.php">
-                <input name="name" id="name" type="text" className="form-control" placeholder="Nom" required />
-                <input name="email" id="email" type="email" className="form-control" placeholder="Email" required />
-                <input name="mobile" id="mobile" type="tel" className="form-control" placeholder="Téléphone" required />
-                <input name="company" id="company" type="text" className="form-control" placeholder="Compagnie" />
+                <input name="name" id="name" type="text" className="form-control" placeholder={t('nom')} required />
+                <input name="email" id="email" type="email" className="form-control" placeholder={t('email')} required />
+                <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('telephone')} required />
+                <input name="company" id="company" type="text" className="form-control" placeholder={t('compagnie')} />
 
-                <textarea name="message" id="message" className="form-control" placeholder="Votre message" rows="6"
+                <textarea name="message" id="message" className="form-control" placeholder={t('message')} rows="6"
                   required></textarea>
 
                 <input type="submit" className="submit" name="submit" onclick="validation()" />
@@ -35,17 +35,17 @@ const contactPage = ({ t }) => {
               </form>
             </div>
             <div className="informations">
-              <h4 className="title-informations">Informations de contact</h4>
-              <p className="text-informations"><img src={logoPosition} className="img-informations" />155 Boulevard de
+              <h4 className="title-informations">{t('informationsTitle')}</h4>
+              <p className="text-informations"><img src={logoPosition} className="img-informations" alt="position" />155 Boulevard de
                     l'Hôpital, 75013 Paris</p>
-              <p className="text-informations"><img src={logoTel} className="img-informations" />06 26 78 42 14</p>
-              <p className="text-informations"><img src={logoMail} className="img-informations" />contact@geosophy.io</p>
+              <p className="text-informations"><img src={logoTel} className="img-informations" alt="telephone" />06 26 78 42 14</p>
+              <p className="text-informations"><img src={logoMail} className="img-informations" alt="mail" />contact@geosophy.io</p>
               <div className="logo-informations">
-                <a href="https://www.linkedin.com/company/geosophy-io/" target="_blank"><img
-                  src={logoLinkedin} className="logo-contact" /></a>
-                <a href="#" target="_blank"><img src={logoYoutube} className="logo-contact" /></a>
-                <a href="https://twitter.com/Geosophy1" target="_blank"><img src={logoTwitter}
-                  className="logo-contact" /></a>
+                <a href="https://www.linkedin.com/company/geosophy-io/" aria-label="linkedin" target="_blank"><img
+                  src={logoLinkedin} className="logo-contact" alt="linkedin" /></a>
+                <a href="#" target="_blank" aria-label="youtube"><img src={logoYoutube} className="logo-contact" alt="youtube" /></a>
+                <a href="https://twitter.com/Geosophy1" aria-label="twitter" target="_blank"><img src={logoTwitter}
+                  className="logo-contact" alt="twitter" /></a>
               </div>
             </div>
           </div>
@@ -253,4 +253,4 @@ const contactPage = ({ t }) => {
 contactPage.Layout = LayoutContact;
 
 
-export default withTranslation('common')(contactPage)
+export default withTranslation('contact')(contactPage)

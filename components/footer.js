@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import LogoTwitter from '../public/twitter.svg';
 import LogoLinkedin from '../public/linkedin.svg';
@@ -16,16 +17,18 @@ const Footer = ({ t }) => {
             <a onClick={() => i18n.changeLanguage(i18n.language = 'fr')}>Français</a> | <a onClick={() => i18n.changeLanguage(i18n.language = 'en')}>English</a>
           </div>
           <div className="div-social-media">
-            <a href="#" target="_blank"><img src={LogoYoutube} className="logo-social-media" /></a>
+            <a href="#" target="_blank"><img src={LogoYoutube} className="logo-social-media" alt="youtube" /></a>
             <a href="https://www.linkedin.com/company/geosophy-io/" target="_blank"><img src={LogoLinkedin}
-              className="logo-social-media" /></a>
+              className="logo-social-media" alt="linkedin" /></a>
             <a href="https://twitter.com/Geosophy1" target="_blank"><img src={LogoTwitter}
-              className="logo-social-media" /></a>
+              className="logo-social-media" alt="twitter" /></a>
           </div>
           <div className="div-contact">
             <ul className="footer-links">
-              <li><a href="pages/contact.html" className="contact-menu">Contact</a></li>
-              <li><a href="#">contact@geosophy.io</a></li>
+              <Link href="/contact">
+                <li><a className="contact-menu">Contact</a></li>
+              </Link>
+              <li><a>contact@geosophy.io</a></li>
               <li>06 26 78 42 14</li>
             </ul>
           </div>
@@ -96,6 +99,7 @@ const Footer = ({ t }) => {
                 text-decoration: none;
                 color: white;
                 position: relative;
+                cursor: pointer;
               }
               
               .contact-menu::after {
@@ -133,6 +137,10 @@ const Footer = ({ t }) => {
 
           @media (max-width: 768px) {
             .div-social-media {
+                width: 100%;
+              }
+
+              .logo-social-media {
                 width: 100%;
               }
         }

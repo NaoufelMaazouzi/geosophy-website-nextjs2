@@ -1,0 +1,11 @@
+{
+    "question": "A question? Do not hesitate to contact us!",
+    "envoiMessage": "Send us a message!",
+    "nom": "Name",
+    "email": "E-mail",
+    "telephone": "Phone",
+    "compagnie": "Company",
+    "message": "Your message",
+    "valider": "Validate",
+    "informationsTitle": "Contact information"
+}

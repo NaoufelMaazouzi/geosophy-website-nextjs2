@@ -2,14 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Navbar from './navbar';
 import Footer from './footer';
+import Head from 'next/head';
 import BandeauEquipe from '../public/Bandeau-equipe-min.jpg';
 
 
 const LayoutEquipe = ({ children }) => {
   return (
-    <div>
+    <React.Fragment>
+      <Head>
+        {/*<link rel="canonical" href="https://example.com" />*/}
+        <title>Equipe</title>
+      </Head>
       <header className="equipe">
-        <Navbar />
+        <Navbar linkId3="link" />
       </header>
       {children}
       <Footer />
@@ -60,7 +65,7 @@ const LayoutEquipe = ({ children }) => {
         flex-direction: column;
       }
       `}</style>
-    </div>
+    </React.Fragment>
   )
 }
 

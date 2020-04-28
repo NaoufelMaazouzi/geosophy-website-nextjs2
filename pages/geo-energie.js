@@ -7,81 +7,81 @@ import LayoutGeoenergie from '../components/layoutGeoenergie';
 
 
 const geoenergiePage = ({ t }) => {
-    return (
-        <React.Fragment>
-            <main>
-                <section id="presentation-section">
-                    <h2 className="title-section" id="title-green">{t('geoenergieTitle')}</h2>
-                    <div className="div-text-subhead">
-                        <p className="first-text-subhead" id="geoPresentation">{t('geoPresentation')}</p>
-                    </div>
-                </section>
+  return (
+    <React.Fragment>
+      <main>
+        <section id="presentation-section">
+          <h2 className="title-section" id="title-green">{t('geoenergieTitle')}</h2>
+          <div className="div-text-subhead">
+            <p className="first-text-subhead" id="geoPresentation">{t('geoPresentation')}</p>
+          </div>
+        </section>
 
-                <section className="schemas-section">
-                    <div className="div-schemas">
-                        <div className="div-img-schemas">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                        <div className="div-text-schemas">
-                            <h3 className="title-schemas">Lorem ipsum</h3>
-                            <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-                            tempus, convallis
-                            nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
-                            tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-                            Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
+        <section className="schemas-section">
+          <div className="div-schemas">
+            <div className="div-img-schemas">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+            <div className="div-text-schemas">
+              <h3 className="title-schemas">Lorem ipsum</h3>
+              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
+              tempus, convallis
+              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
+              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
+              Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
                         tempus, convallis</p>
-                        </div>
-                    </div>
-                    <div className="div-schemas">
-                        <div className="div-img-schemas" id="n2">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                        <div className="div-text-schemas">
-                            <h3 className="title-schemas">Lorem ipsum</h3>
-                            <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-                            tempus, convallis
-                            nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
-                            tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-                            Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
+            </div>
+          </div>
+          <div className="div-schemas">
+            <div className="div-img-schemas" id="n2">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+            <div className="div-text-schemas">
+              <h3 className="title-schemas">Lorem ipsum</h3>
+              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
+              tempus, convallis
+              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
+              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
+              Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
                         tempus, convallis</p>
-                        </div>
-                        <div className="div-img-schemas" id="n1">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                    </div>
-                    <div className="div-schemas" id="last-div-schemas">
-                        <div className="div-img-schemas">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                        <div className="div-text-schemas">
-                            <h3 className="title-schemas">Lorem ipsum</h3>
-                            <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-                            tempus, convallis
-                            nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
-                            tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-                            Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
+            </div>
+            <div className="div-img-schemas" id="n1">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+          </div>
+          <div className="div-schemas" id="last-div-schemas">
+            <div className="div-img-schemas">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+            <div className="div-text-schemas">
+              <h3 className="title-schemas">Lorem ipsum</h3>
+              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
+              tempus, convallis
+              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
+              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
+              Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
                         tempus, convallis</p>
-                        </div>
-                    </div>
-                    <div className="div-call-action">
-                        <h3 className="title-call-action" id="analyser">{t('analyser')}</h3>
-                        <a href="https://app.geosophy.io/auth/login" target="_blank" className="button greenButton" id="essaiButton">{t('essaiButton')}</a>
-                    </div>
-                </section>
-            </main>
-            <style jsx>{`
+            </div>
+          </div>
+          <div className="div-call-action">
+            <h3 className="title-call-action" id="analyser">{t('analyser')}</h3>
+            <a href="https://app.geosophy.io/auth/login" aria-label="schemas" target="_blank" className="button greenButton" id="essaiButton">{t('essaiButton')}</a>
+          </div>
+        </section>
+      </main>
+      <style jsx>{`
         /***************************************** PRESENTATION SECTION *****************************************/
 
         #presentation-section {
@@ -333,8 +333,8 @@ const geoenergiePage = ({ t }) => {
 
           }
       `}</style>
-        </React.Fragment>
-    )
+    </React.Fragment>
+  )
 }
 
 geoenergiePage.Layout = LayoutGeoenergie;

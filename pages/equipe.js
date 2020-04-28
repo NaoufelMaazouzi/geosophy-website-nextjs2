@@ -19,133 +19,133 @@ import LayoutEquipe from '../components/layoutEquipe';
 
 
 const equipePage = ({ t }) => {
-    return (
-        <React.Fragment>
-            <main>
-                <section id="presentation-section">
-                    <h2 className="title-section" id="title-blue">{t('equipeTitle')}</h2>
-                </section>
+  return (
+    <React.Fragment>
+      <main>
+        <section id="presentation-section">
+          <h2 className="title-section" id="title-blue">{t('equipeTitle')}</h2>
+        </section>
 
-                <section className="schemas-section">
-                    <div className="div-schemas">
-                        <div className="div-img-schemas">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                        <div className="div-text-schemas">
-                            <h3 className="title-schemas" id="titleHistory">{t('titleHistory')}</h3>
-                            <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-                            tempus, convallis
-                            nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
-                            tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-                            Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
+        <section className="schemas-section">
+          <div className="div-schemas">
+            <div className="div-img-schemas">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+            <div className="div-text-schemas">
+              <h3 className="title-schemas" id="titleHistory">{t('titleHistory')}</h3>
+              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
+              tempus, convallis
+              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
+              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
+              Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
                         tempus, convallis</p>
-                        </div>
-                    </div>
-                    <div className="div-schemas">
-                        <div className="div-img-schemas" id="n2">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                        <div className="div-text-schemas">
-                            <h3 className="title-schemas" id="titleCulture">{t('titleCulture')}</h3>
-                            <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-                            tempus, convallis
-                            nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
-                            tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-                            Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
+            </div>
+          </div>
+          <div className="div-schemas">
+            <div className="div-img-schemas" id="n2">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+            <div className="div-text-schemas">
+              <h3 className="title-schemas" id="titleCulture">{t('titleCulture')}</h3>
+              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
+              tempus, convallis
+              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
+              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
+              Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
                         tempus, convallis</p>
-                        </div>
-                        <div className="div-img-schemas" id="n1">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                    </div>
-                    <div className="div-schemas" id="last-div-schemas">
-                        <div className="div-img-schemas">
-                            <a href="#"><img className="img-schemas" src={imgSchemas} /></a>
-                        </div>
-                        <div className="div-text-schemas">
-                            <h3 className="title-schemas" id="titleCommunity">{t('titleCommunity')}</h3>
-                            <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-                            tempus, convallis
-                            nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
-                            tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-                            Sed non tellus in
-                            lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                            sed sapien
+            </div>
+            <div className="div-img-schemas" id="n1">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+          </div>
+          <div className="div-schemas" id="last-div-schemas">
+            <div className="div-img-schemas">
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            </div>
+            <div className="div-text-schemas">
+              <h3 className="title-schemas" id="titleCommunity">{t('titleCommunity')}</h3>
+              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
+              tempus, convallis
+              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
+              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
+              Sed non tellus in
+              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sed sapien
                         tempus, convallis</p>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                </section>
+        </section>
 
-                <section className="person-section">
-                    <div className="div-person">
-                        <img className="img-person" src={imgPerson} />
-                        <p className="person-name">Quentin Barral</p>
-                        <p className="person-job" id="cto">{t('cto')}</p>
-                        <a href="https://www.linkedin.com/in/quentin-barral/" target="_blank" className="linkedin"><img
-                            src={logoLinkedin} /></a>
-                    </div>
-                    <div className="div-person">
-                        <img className="img-person" src={imgPerson} />
-                        <p className="person-name">Alice Chougnet</p>
-                        <p className="person-job" id="ceo">{t('ceo')}</p>
-                        <a href="https://www.linkedin.com/in/alice-chougnet/" target="_blank" className="linkedin"><img
-                            src={logoLinkedin} /></a>
-                    </div>
-                    <div className="div-person">
-                        <img className="img-person" src={imgPerson} />
-                        <p className="person-name">Louis Bondaz</p>
-                        <p className="person-job">Data Scientist</p>
-                        <a href="https://www.linkedin.com/in/louis-bondaz-bb2835b1/" target="_blank" className="linkedin"><img
-                            src={logoLinkedin} /></a>
-                    </div>
-                    <div className="div-call-action">
-                        <h3 className="title-call-action" id="question">{t('question')}</h3>
-                        <Link href="/contact">
-                            <a className="button blueButton contactButton">Contact</a>
-                        </Link>
-                    </div>
-                </section>
-                <section className="references-section">
-                    <div className="div-call-action">
-                        <h2 className="title-call-action" id="soutien">{t('soutien')}</h2>
-                    </div>
-                    <div className="slider">
-                        <div className="slide">
-                            <img src={logoArts} />
-                            <img src={logoFrenchTech} />
-                            <img src={logoEit} />
-                            <img src={logoDynFluid} />
-                            <img src={logoBrgm} />
-                            <img src={logoIfpen} />
-                            <img src={logoSchlumberger} />
-                            <img src={logoHbs} />
+        <section className="person-section">
+          <div className="div-person">
+            <img className="img-person" src={imgPerson} alt="photo Quentin" />
+            <p className="person-name">Quentin Barral</p>
+            <p className="person-job" id="cto">{t('cto')}</p>
+            <a href="https://www.linkedin.com/in/quentin-barral/" aria-label="linkedin" target="_blank" className="linkedin"><img
+              src={logoLinkedin} alt="linkedin" /></a>
+          </div>
+          <div className="div-person">
+            <img className="img-person" src={imgPerson} alt="photo Alice" />
+            <p className="person-name">Alice Chougnet</p>
+            <p className="person-job" id="ceo">{t('ceo')}</p>
+            <a href="https://www.linkedin.com/in/alice-chougnet/" aria-label="linkedin" target="_blank" className="linkedin"><img
+              src={logoLinkedin} alt="linkedin" /></a>
+          </div>
+          <div className="div-person">
+            <img className="img-person" src={imgPerson} alt="photo Louis" />
+            <p className="person-name">Louis Bondaz</p>
+            <p className="person-job">Data Scientist</p>
+            <a href="https://www.linkedin.com/in/louis-bondaz-bb2835b1/" aria-label="linkedin" target="_blank" className="linkedin"><img
+              src={logoLinkedin} alt="linkedin" /></a>
+          </div>
+          <div className="div-call-action">
+            <h3 className="title-call-action" id="question">{t('question')}</h3>
+            <Link href="/contact">
+              <a className="button blueButton contactButton" aria-label="contact">Contact</a>
+            </Link>
+          </div>
+        </section>
+        <section className="references-section">
+          <div className="div-call-action">
+            <h2 className="title-call-action" id="soutien">{t('soutien')}</h2>
+          </div>
+          <div className="slider">
+            <div className="slide">
+              <img src={logoArts} alt="logo arts" />
+              <img src={logoFrenchTech} alt="logo FrecnhTech" />
+              <img src={logoEit} alt="logo Eit" />
+              <img src={logoDynFluid} alt="logo DynFluid" />
+              <img src={logoBrgm} alt="logo Brgm" />
+              <img src={logoIfpen} alt="logo Ifpen" />
+              <img src={logoSchlumberger} alt="logo Schlumberger" />
+              <img src={logoHbs} alt="logo Hbs" />
 
-                        </div>
-                        <div className="slide">
-                            <img src={logoArts} />
-                            <img src={logoFrenchTech} />
-                            <img src={logoEit} />
-                            <img src={logoDynFluid} />
-                            <img src={logoBrgm} />
-                            <img src={logoIfpen} />
-                            <img src={logoSchlumberger} />
-                            <img src={logoHbs} />
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <style jsx>{`
+            </div>
+            <div className="slide">
+              <img src={logoArts} alt="logo arts" />
+              <img src={logoFrenchTech} alt="logo FrecnhTech" />
+              <img src={logoEit} alt="logo Eit" />
+              <img src={logoDynFluid} alt="logo DynFluid" />
+              <img src={logoBrgm} alt="logo Brgm" />
+              <img src={logoIfpen} alt="logo Ifpen" />
+              <img src={logoSchlumberger} alt="logo Schlumberger" />
+              <img src={logoHbs} alt="logo Hbs" />
+            </div>
+          </div>
+        </section>
+      </main>
+      <style jsx>{`
             /***************************************** PRESENTATION SECTION *****************************************/
 
             #presentation-section {
@@ -386,7 +386,7 @@ const equipePage = ({ t }) => {
               position: absolute;
               content: "";
               background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-              z-index: 2;
+              z-index: 1;
             }
     
             .slider::before {
@@ -538,8 +538,8 @@ const equipePage = ({ t }) => {
             }
           }
       `}</style>
-        </React.Fragment>
-    )
+    </React.Fragment>
+  )
 }
 
 equipePage.Layout = LayoutEquipe;

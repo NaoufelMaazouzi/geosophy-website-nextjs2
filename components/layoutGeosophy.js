@@ -2,18 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Navbar from './navbar';
 import Footer from './footer';
+import Head from 'next/head';
 import BandeauGeosophy from '../public/Bandeau-Geosophy-min.jpg';
-
-
-
-
 
 
 const LayoutGeosophy = ({ children }) => {
   return (
-    <div>
+    <React.Fragment>
+      <Head>
+        {/*<link rel="canonical" href="https://example.com" />*/}
+        <title>Geosophy</title>
+      </Head>
       <header className="geosophy">
-        <Navbar />
+        <Navbar linkId1="link" />
       </header>
       {children}
       <Footer />
@@ -66,7 +67,7 @@ const LayoutGeosophy = ({ children }) => {
         flex-direction: column;
       }
       `}</style>
-    </div>
+    </React.Fragment>
   )
 }
 

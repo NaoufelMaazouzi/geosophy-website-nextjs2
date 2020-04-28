@@ -1,42 +1,46 @@
-
 import Link from 'next/link';
 import LogoBlanc from '../public/Logo-blanc.png';
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { withTranslation } from '../i18n';
 
 
-const Navbar = ({ t }) => (
+function Navbar({ t, linkId1, linkId2, linkId3 }) {
+  const [open, setOpen] = useState(false);
+  console.log(open)
 
-  <React.Fragment>
-    <nav>
-      <div className="hamburger icon">
-        <div className="line"></div>
+  return (
+    <React.Fragment>
+      <nav>
+        <div className={open ? "hamburger active icon" : "hamburger icon"} onClick={() => setOpen(!open)}>
+          <div className="line"></div>
+        </div>
+        <div className="div-logo-navbar">
+          <Link href="/">
+            <a aria-label="accueil"><img src={LogoBlanc} className="img-logo" alt="accueil" /></a>
+          </Link>
+        </div>
+        <ul className={open ? "nav-links open" : "nav-links"}>
+          <Link href="/">
+            <li className={open ? "fade" : ""}><a id={linkId1} aria-label="geosophy">Geosophy</a></li>
+          </Link>
+          <Link href="/geo-energie">
+            <li className={open ? "fade" : ""}><a id={linkId2} className="geo-energie-link" aria-label="geoenergie">{t('navbar.geoenergie')}</a></li>
+          </Link>
+          <Link href="/equipe">
+            <li className={open ? "fade" : ""}><a id={linkId3} className="equipe-link" aria-label="equipe">{t('navbar.equipe')}</a></li>
+          </Link>
+          <Link href="/page1">
+            <li className={open ? "fade" : ""}><a href="https://app.geosophy.io/auth/login" className="connexion-link" aria-label="connexion">{t('navbar.connexion')}</a></li>
+          </Link>
+        </ul>
+      </nav>
+      <div className="div-slogan">
+        <h2 className="slogan">{t('header.slogan')}<br />{t('header.slogan2')}</h2>
+        <h4 className="slogan-subhead">{t('header.sloganSubhead')}</h4>
+        <a href="#presentation-section" aria-label="scroll"><span className="scroll-down"></span></a>
       </div>
-      <div className="div-logo-navbar">
-        <a href="index.html"><img src={LogoBlanc} className="img-logo" /></a>
-      </div>
-      <ul className="nav-links">
-        <Link href="/">
-          <li><a id="link">Geosophy</a></li>
-        </Link>
-        <Link href="/geo-energie">
-          <li><a className="geo-energie-link">{t('navbar.geoenergie')}</a></li>
-        </Link>
-        <Link href="/equipe">
-          <li><a className="equipe-link">{t('navbar.equipe')}</a></li>
-        </Link>
-        <Link href="/page1">
-          <li><a href="https://app.geosophy.io/auth/login" className="connexion-link">{t('navbar.connexion')}</a></li>
-        </Link>
-      </ul>
-    </nav>
-    <div className="div-slogan">
-      <h2 className="slogan">{t('header.slogan')}<br />{t('header.slogan2')}</h2>
-      <h4 className="slogan-subhead">{t('header.sloganSubhead')}</h4>
-      <a href="#presentation-section"><span className="scroll-down"></span></a>
-    </div>
-    <style jsx>{`
+      <style jsx>{`
         .scroll-down {
             position: absolute;
             top: 93%;
@@ -50,7 +54,6 @@ const Navbar = ({ t }) => (
             transform: rotate(-45deg);
             box-sizing: border-box;
         }
-
         .div-slogan {
             height: 85vh;
             display: -webkit-box;
@@ -169,7 +172,6 @@ const Navbar = ({ t }) => (
             object-fit: cover;
           }
           
-
         @media (min-width: 421px) and (max-width: 1365px) {
             * {
               font-size: 13px;
@@ -183,12 +185,10 @@ const Navbar = ({ t }) => (
             .div-logo-navbar img {
               height: 100%;
             }
-
             .div-slogan {
                 margin: 5% 5%;
               }
           }
-
           @media (max-width: 420px) {
             * {
               font-size: 8px;
@@ -197,12 +197,10 @@ const Navbar = ({ t }) => (
             .div-logo-navbar img {
               height: 70%;
             }
-
             .div-slogan {
                 margin: 5% 5%;
               }
         }
-
           @media (max-width: 768px) {
             /* Header */
             nav {
@@ -270,7 +268,7 @@ const Navbar = ({ t }) => (
               top: 50%;
               -webkit-transform: translate(-5%, -50%);
               transform: translate(-5%, -50%);
-              z-index: 2;
+              z-index: 3;
             }
           
             .nav-links {
@@ -293,7 +291,10 @@ const Navbar = ({ t }) => (
               clip-path: circle(1580px at 120% -10%);
               -webkit-clip-path: circle(1580px at 120% -10%);
               pointer-events: all;
-              z-index: 1;
+              z-index: 2;
+            }
+            .nav-links li.fade {
+              opacity: 1;
             }
           
             .nav-links li {
@@ -324,17 +325,15 @@ const Navbar = ({ t }) => (
               transition: all 0.5s ease 0.8s;
             }
           
-            li.fade {
-              opacity: 1;
-            }
+            
         }
       `}</style>
-  </React.Fragment>
-)
+    </React.Fragment>
+  )
+}
 
 Navbar.propTypes = {
   t: PropTypes.func.isRequired,
 }
 
 export default withTranslation('common')(Navbar);
-

@@ -35,7 +35,7 @@ const Homepage = ({ t }) => {
           </div>
           <div className="div-call-action">
             <h3 className="title-call-action">{t('main.analyser')}</h3>
-            <a href="https://app.geosophy.io/auth/login" target="_blank" className="button blueButton">{t('main.essaiButton')}</a>
+            <a href="https://app.geosophy.io/auth/login" target="_blank" className="button blueButton" aria-label="essai">{t('main.essaiButton')}</a>
           </div>
         </section>
         <section className="references-section">
@@ -44,20 +44,20 @@ const Homepage = ({ t }) => {
           </div>
           <div className="slider">
             <div className="slide">
-              <img src={logoIcade} />
-              <img src={logoCovea} />
-              <img src={logoUnion} />
-              <img src={logoCovivio} />
-              <img src={logoLamotte} />
-              <img src={logoFrancaise} />
+              <img src={logoIcade} alt="logo Icade" />
+              <img src={logoCovea} alt="logo Covea" />
+              <img src={logoUnion} alt="logo Union" />
+              <img src={logoCovivio} alt="logo Covivio" />
+              <img src={logoLamotte} alt="logo Lamotte" />
+              <img src={logoFrancaise} alt="logo Francaise" />
             </div>
             <div className="slide">
-              <img src={logoIcade} />
-              <img src={logoCovea} />
-              <img src={logoUnion} />
-              <img src={logoCovivio} />
-              <img src={logoLamotte} />
-              <img src={logoFrancaise} />
+              <img src={logoIcade} alt="logo Icade" />
+              <img src={logoCovea} alt="logo Covea" />
+              <img src={logoUnion} alt="logo Union" />
+              <img src={logoCovivio} alt="logo Covivio" />
+              <img src={logoLamotte} alt="logo Lamotte" />
+              <img src={logoFrancaise} alt="logo Francaise" />
             </div>
           </div>
         </section>
@@ -264,7 +264,7 @@ const Homepage = ({ t }) => {
           position: absolute;
           content: "";
           background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-          z-index: 2;
+          z-index: 1;
         }
 
         .slider::before {

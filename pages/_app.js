@@ -9,9 +9,11 @@ class MyApp extends App {
         const { Component, pageProps } = this.props
         const Layout = Component.Layout || Noop
         return (
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
+            <React.Fragment>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </React.Fragment>
         )
     }
 }
