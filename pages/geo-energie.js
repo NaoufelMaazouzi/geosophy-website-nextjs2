@@ -6,7 +6,7 @@ import LayoutGeoenergie from '../components/layoutGeoenergie';
 
 
 
-const geoenergiePage = ({ t }) => {
+function geoenergiePage({ t }) {
   return (
     <React.Fragment>
       <main>
@@ -338,6 +338,10 @@ const geoenergiePage = ({ t }) => {
 }
 
 geoenergiePage.Layout = LayoutGeoenergie;
+
+geoenergiePage.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
 
 export default withTranslation('geo-energie')(geoenergiePage)

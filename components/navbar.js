@@ -7,7 +7,6 @@ import { withTranslation } from '../i18n';
 
 function Navbar({ t, linkId1, linkId2, linkId3 }) {
   const [open, setOpen] = useState(false);
-  console.log(open)
 
   return (
     <React.Fragment>
@@ -30,9 +29,7 @@ function Navbar({ t, linkId1, linkId2, linkId3 }) {
           <Link href="/equipe">
             <li className={open ? "fade" : ""}><a id={linkId3} className="equipe-link" aria-label="equipe">{t('navbar.equipe')}</a></li>
           </Link>
-          <Link href="/page1">
-            <li className={open ? "fade" : ""}><a href="https://app.geosophy.io/auth/login" className="connexion-link" aria-label="connexion">{t('navbar.connexion')}</a></li>
-          </Link>
+          <li className={open ? "fade" : ""}><a href="https://app.geosophy.io/auth/login" className="connexion-link" aria-label="connexion">{t('navbar.connexion')}</a></li>
         </ul>
       </nav>
       <div className="div-slogan">

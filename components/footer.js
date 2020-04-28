@@ -7,7 +7,7 @@ import LogoYoutube from '../public/youtube.svg';
 
 import { withTranslation, i18n } from '../i18n'
 
-const Footer = ({ t }) => {
+function Footer({ t }) {
   return (
     <React.Fragment>
       <footer>

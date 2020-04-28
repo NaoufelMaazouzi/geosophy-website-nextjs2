@@ -13,7 +13,7 @@ import LayoutGeosophy from '../components/layoutGeosophy';
 
 
 
-const Homepage = ({ t }) => {
+function Homepage({ t }) {
   return (
     <React.Fragment>
       <main>
@@ -326,5 +326,8 @@ const Homepage = ({ t }) => {
 
 Homepage.Layout = LayoutGeosophy;
 
+Homepage.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
 export default withTranslation('common')(Homepage)

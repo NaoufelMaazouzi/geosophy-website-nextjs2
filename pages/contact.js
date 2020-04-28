@@ -12,7 +12,7 @@ import logoYoutube from '../public/youtube2.svg';
 import logoTwitter from '../public/twitter2.svg';
 
 
-const contactPage = ({ t }) => {
+function contactPage({ t }) {
   return (
     <React.Fragment>
       <main>
@@ -252,5 +252,8 @@ const contactPage = ({ t }) => {
 
 contactPage.Layout = LayoutContact;
 
+contactPage.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
 export default withTranslation('contact')(contactPage)

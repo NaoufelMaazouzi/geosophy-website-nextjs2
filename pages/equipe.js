@@ -18,7 +18,7 @@ import LayoutEquipe from '../components/layoutEquipe';
 
 
 
-const equipePage = ({ t }) => {
+function equipePage({ t }) {
   return (
     <React.Fragment>
       <main>
@@ -543,6 +543,10 @@ const equipePage = ({ t }) => {
 }
 
 equipePage.Layout = LayoutEquipe;
+
+equipePage.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
 
 export default withTranslation('equipe')(equipePage)
