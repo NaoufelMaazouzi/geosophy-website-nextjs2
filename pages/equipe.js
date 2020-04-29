@@ -23,7 +23,7 @@ function equipePage({ t }) {
     <React.Fragment>
       <main>
         <section id="presentation-section">
-          <h2 className="title-section" id="title-blue">{t('equipeTitle')}</h2>
+          <h2 className="title-section" id="title-blue">{t('equipe.equipeTitle')}</h2>
         </section>
 
         <section className="schemas-section">
@@ -32,7 +32,7 @@ function equipePage({ t }) {
               <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas" id="titleHistory">{t('titleHistory')}</h3>
+              <h3 className="title-schemas" id="titleHistory">{t('equipe.titleHistory')}</h3>
               <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
               tempus, convallis
               nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
@@ -50,7 +50,7 @@ function equipePage({ t }) {
               <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas" id="titleCulture">{t('titleCulture')}</h3>
+              <h3 className="title-schemas" id="titleCulture">{t('equipe.titleCulture')}</h3>
               <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
               tempus, convallis
               nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
@@ -71,7 +71,7 @@ function equipePage({ t }) {
               <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas" id="titleCommunity">{t('titleCommunity')}</h3>
+              <h3 className="title-schemas" id="titleCommunity">{t('equipe.titleCommunity')}</h3>
               <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
               tempus, convallis
               nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
@@ -91,14 +91,14 @@ function equipePage({ t }) {
           <div className="div-person">
             <img className="img-person" src={imgPerson} alt="photo Quentin" />
             <p className="person-name">Quentin Barral</p>
-            <p className="person-job" id="cto">{t('cto')}</p>
+            <p className="person-job" id="cto">{t('equipe.cto')}</p>
             <a href="https://www.linkedin.com/in/quentin-barral/" aria-label="linkedin" target="_blank" className="linkedin"><img
               src={logoLinkedin} alt="linkedin" /></a>
           </div>
           <div className="div-person">
             <img className="img-person" src={imgPerson} alt="photo Alice" />
             <p className="person-name">Alice Chougnet</p>
-            <p className="person-job" id="ceo">{t('ceo')}</p>
+            <p className="person-job" id="ceo">{t('equipe.ceo')}</p>
             <a href="https://www.linkedin.com/in/alice-chougnet/" aria-label="linkedin" target="_blank" className="linkedin"><img
               src={logoLinkedin} alt="linkedin" /></a>
           </div>
@@ -110,7 +110,7 @@ function equipePage({ t }) {
               src={logoLinkedin} alt="linkedin" /></a>
           </div>
           <div className="div-call-action">
-            <h3 className="title-call-action" id="question">{t('question')}</h3>
+            <h3 className="title-call-action" id="question">{t('equipe.question')}</h3>
             <Link href="/contact">
               <a className="button blueButton contactButton" aria-label="contact">Contact</a>
             </Link>
@@ -118,7 +118,7 @@ function equipePage({ t }) {
         </section>
         <section className="references-section">
           <div className="div-call-action">
-            <h2 className="title-call-action" id="soutien">{t('soutien')}</h2>
+            <h2 className="title-call-action" id="soutien">{t('equipe.soutien')}</h2>
           </div>
           <div className="slider">
             <div className="slide">
@@ -549,4 +549,4 @@ equipePage.propTypes = {
 }
 
 
-export default withTranslation('equipe')(equipePage)
+export default withTranslation('common')(equipePage)

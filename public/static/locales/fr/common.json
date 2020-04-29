@@ -20,5 +20,35 @@
         "confianceTitle": "Ils nous font confiance !",
         "analyser": "Vous voulez analyser votre foncier gratuitement ?",
         "essaiButton": "Essai gratuit"
+    },
+    "contact": {
+        "question": "Une question ? N'hésitez pas à nous contacter !",
+        "envoiMessage": "Envoyez-nous un message !",
+        "nom": "Nom",
+        "email": "Email",
+        "telephone": "Téléphone",
+        "compagnie": "Compagnie",
+        "message": "Votre message",
+        "valider": "Valider",
+        "informationsTitle": "Informations de contact"
+    },
+    "equipe": {
+        "question": "Une question ? N'hésitez pas à nous contacter !",
+        "equipeTitle": "L'équipe Geosophy",
+        "titleHistory": "Notre histoire",
+        "titleCulture": "Notre culture",
+        "titleCommunity": "Notre communauté",
+        "cto": "CTO et physicien",
+        "ceo": "CEO et physicienne",
+        "soutien": "Ils nous soutiennet !"
+    },
+    "footer": {
+        "droits": "Tous droits réservés"
+    },
+    "geo-energie": {
+        "geoenergieTitle": "Géo-énergie",
+        "geoPresentation": "La géo-énergie pour le chauffage ou la climatisation des bâtiments est une énergie renouvelable disponible localement, tout le temps, sans intermittence et exploitable avec une faible empreinte au sol !",
+        "analyser": "Vous voulez analyser votre foncier gratuitement ?",
+        "essaiButton": "Essai gratuit"
     }
 }

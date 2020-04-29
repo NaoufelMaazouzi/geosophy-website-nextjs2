@@ -33,7 +33,7 @@ function Footer({ t }) {
             </ul>
           </div>
           <div className="div-copyright">
-            <p>© Copyright 2019 – 2020. {t('droits')}</p>
+            <p>© Copyright 2019 – 2020. {t('footer.droits')}</p>
           </div>
 
         </section>
@@ -153,4 +153,4 @@ Footer.propTypes = {
   t: PropTypes.func.isRequired,
 }
 
-export default withTranslation('footer')(Footer)
+export default withTranslation('common')(Footer)

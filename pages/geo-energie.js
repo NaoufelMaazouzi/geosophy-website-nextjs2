@@ -11,16 +11,16 @@ function geoenergiePage({ t }) {
     <React.Fragment>
       <main>
         <section id="presentation-section">
-          <h2 className="title-section" id="title-green">{t('geoenergieTitle')}</h2>
+          <h2 className="title-section" id="title-green">{t('geo-energie.geoenergieTitle')}</h2>
           <div className="div-text-subhead">
-            <p className="first-text-subhead" id="geoPresentation">{t('geoPresentation')}</p>
+            <p className="first-text-subhead" id="geoPresentation">{t('geo-energie.geoPresentation')}</p>
           </div>
         </section>
 
         <section className="schemas-section">
           <div className="div-schemas">
             <div className="div-img-schemas">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+              <a href="#" aria-label="schemas"><img className="img-schemas" src={require('../public/schémas1.jpg')} alt="schemas" /></a>
             </div>
             <div className="div-text-schemas">
               <h3 className="title-schemas">Lorem ipsum</h3>
@@ -76,8 +76,8 @@ function geoenergiePage({ t }) {
             </div>
           </div>
           <div className="div-call-action">
-            <h3 className="title-call-action" id="analyser">{t('analyser')}</h3>
-            <a href="https://app.geosophy.io/auth/login" aria-label="schemas" target="_blank" className="button greenButton" id="essaiButton">{t('essaiButton')}</a>
+            <h3 className="title-call-action" id="analyser">{t('geo-energie.analyser')}</h3>
+            <a href="https://app.geosophy.io/auth/login" aria-label="schemas" target="_blank" className="button greenButton" id="essaiButton">{t('geo-energie.essaiButton')}</a>
           </div>
         </section>
       </main>
@@ -344,4 +344,4 @@ geoenergiePage.propTypes = {
 }
 
 
-export default withTranslation('geo-energie')(geoenergiePage)
+export default withTranslation('common')(geoenergiePage)

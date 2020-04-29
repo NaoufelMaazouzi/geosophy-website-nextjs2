@@ -1,9 +1,6 @@
-const withImages = require('next-images');
+const withPlugins = require('next-compose-plugins');
+const optimizedImages = require('next-optimized-images');
 
-module.exports = withImages() /*,{
-    publicRuntimeConfig: {
-        localeSubpaths: typeof process.env.LOCALE_SUBPATHS === 'string'
-            ? process.env.LOCALE_SUBPATHS
-            : 'none',
-    },
-}*/
+module.exports = withPlugins([
+    optimizedImages,
+]);

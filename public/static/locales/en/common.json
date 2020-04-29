@@ -20,5 +20,35 @@
         "confianceTitle": "They trust us!",
         "analyser": "Do you want to analyze your property for free?",
         "essaiButton": "Free try"
+    },
+    "contact": {
+        "question": "A question? Do not hesitate to contact us!",
+        "envoiMessage": "Send us a message!",
+        "nom": "Name",
+        "email": "E-mail",
+        "telephone": "Phone",
+        "compagnie": "Company",
+        "message": "Your message",
+        "valider": "Validate",
+        "informationsTitle": "Contact information"
+    },
+    "equipe": {
+        "equipeTitle": "The geosophy team",
+        "titleHistory": "Our history",
+        "titleCulture": "Our culture",
+        "titleCommunity": "Our community",
+        "cto": "CTO and physicist",
+        "ceo": "CEO and physicist",
+        "question": "A question? Do not hesitate to contact us!",
+        "soutien": "They support us!"
+    },
+    "footer": {
+        "droits": "All rights reserved"
+    },
+    "geo-energie": {
+        "geoenergieTitle": "Geo-energy",
+        "geoPresentation": "Geo-energy for heating or cooling buildings is renewable energy available locally, all the time, intermittently and usable with a small footprint!",
+        "analyser": "Do you want to analyze your property for free?",
+        "essaiButton": "Free try"
     }
 }

@@ -17,25 +17,25 @@ function contactPage({ t }) {
     <React.Fragment>
       <main>
         <section id="contact-section">
-          <h2 className="title-section" id="title-cyan">{t('question')}</h2>
+          <h2 className="title-section" id="title-cyan">{t('contact.question')}</h2>
           <div className="div-contact-form">
             <div className="message">
-              <h4 className="title-message">{t('envoiMessage')}</h4>
+              <h4 className="title-message">{t('contact.envoiMessage')}</h4>
               <form id="contact-form" method="POST" action="../php/contact-form-handle.php">
-                <input name="name" id="name" type="text" className="form-control" placeholder={t('nom')} required />
-                <input name="email" id="email" type="email" className="form-control" placeholder={t('email')} required />
-                <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('telephone')} required />
-                <input name="company" id="company" type="text" className="form-control" placeholder={t('compagnie')} />
+                <input name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')} required />
+                <input name="email" id="email" type="email" className="form-control" placeholder={t('contact.email')} required />
+                <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('contact.telephone')} required />
+                <input name="company" id="company" type="text" className="form-control" placeholder={t('contact.compagnie')} />
 
-                <textarea name="message" id="message" className="form-control" placeholder={t('message')} rows="6"
+                <textarea name="message" id="message" className="form-control" placeholder={t('contact.message')} rows="6"
                   required></textarea>
 
-                <input type="submit" className="submit" name="submit" onclick="validation()" />
+                <input type="submit" className="submit" name="submit" onClick="validation()" />
 
               </form>
             </div>
             <div className="informations">
-              <h4 className="title-informations">{t('informationsTitle')}</h4>
+              <h4 className="title-informations">{t('contact.informationsTitle')}</h4>
               <p className="text-informations"><img src={logoPosition} className="img-informations" alt="position" />155 Boulevard de
                     l'Hôpital, 75013 Paris</p>
               <p className="text-informations"><img src={logoTel} className="img-informations" alt="telephone" />06 26 78 42 14</p>
@@ -256,4 +256,4 @@ contactPage.propTypes = {
   t: PropTypes.func.isRequired,
 }
 
-export default withTranslation('contact')(contactPage)
+export default withTranslation('common')(contactPage)
