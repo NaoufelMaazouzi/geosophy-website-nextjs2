@@ -84,13 +84,13 @@ function Homepage({ t }) {
           text-align: center;
           font-family: bahnschrift;
           font-weight: 400;
-          width: 100%;
+          width: 80%;
         }
         
         .title-section::after {
           content: "";
           width: 120px;
-          height: 3px;
+          height: 1.5px;
           background: black;
           border-radius: 12px;
           position: absolute;
@@ -103,7 +103,7 @@ function Homepage({ t }) {
         }
         
         .div-text-subhead {
-          width: 70%;
+          width: 80%;
           margin-top: 5%;
           margin-bottom: 8%;
           text-align: center;

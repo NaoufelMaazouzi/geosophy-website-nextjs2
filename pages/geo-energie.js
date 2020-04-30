@@ -104,26 +104,11 @@ function geoenergiePage({ t }) {
           text-align: center;
           font-family: bahnschrift;
           font-weight: 400;
-          width: 100%;
-        }
-        
-        .title-section::after {
-          content: "";
-          width: 120px;
-          height: 3px;
-          background: black;
-          border-radius: 12px;
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          margin: 0 auto;
-          -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+          width: 80%;
         }
         
         .div-text-subhead {
-          width: 70%;
+          width: 80%;
           margin-top: 5%;
           margin-bottom: 8%;
           text-align: center;
@@ -144,7 +129,7 @@ function geoenergiePage({ t }) {
         #title-green::after {
             content: "";
             width: 120px;
-            height: 3px;
+            height: 1.5px;
             background: #7bd444;
             border-radius: 12px;
             position: absolute;
@@ -330,7 +315,6 @@ function geoenergiePage({ t }) {
             #n1 {
               display: none;
             }
-
 
           }
       `}</style>

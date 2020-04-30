@@ -128,12 +128,6 @@ function Footer({ t }) {
                 width: 100%;
                 margin-top: 2%;
               }
-        
-          @media (max-width: 420px) {
-            .logo-social-media {
-                width: 100%;
-              }
-        }
 
           @media (max-width: 768px) {
             .div-social-media {
@@ -143,7 +137,23 @@ function Footer({ t }) {
               .logo-social-media {
                 width: 100%;
               }
+
+              .contact-menu::after {
+                content: "";
+                width: 25px;
+              }
         }
+
+        @media (max-width: 420px) {
+          .logo-social-media {
+              width: 100%;
+            }
+
+            .contact-menu::after {
+              content: "";
+              width: 15px;
+            }
+      }
       `}</style>
     </React.Fragment>
   )

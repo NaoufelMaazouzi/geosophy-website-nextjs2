@@ -21,7 +21,7 @@ function contactPage({ t }) {
           <div className="div-contact-form">
             <div className="message">
               <h4 className="title-message">{t('contact.envoiMessage')}</h4>
-              <form id="contact-form" method="POST" action="../php/contact-form-handle.php">
+              <form id="contact-form" method="POST" action="/php/contact-form-handle.php">
                 <input name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')} required />
                 <input name="email" id="email" type="email" className="form-control" placeholder={t('contact.email')} required />
                 <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('contact.telephone')} required />
@@ -66,13 +66,13 @@ function contactPage({ t }) {
     text-align: center;
     font-family: bahnschrift;
     font-weight: 400;
-    width: 100%;
+    width: 80%;
   }
   
   #title-cyan::after {
     content: "";
     width: 120px;
-    height: 3px;
+    height: 1.5px;
     background: #00736d;
     border-radius: 12px;
     position: absolute;
@@ -207,6 +207,10 @@ function contactPage({ t }) {
     /* Contact section */
   .form-control {
     width: 80%;
+  }
+
+  .title-section {
+    margin-bottom: 8%;
   }
 
   #contact-form {
