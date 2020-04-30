@@ -13,6 +13,13 @@ class MyApp extends App {
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
+                <style jsx global>{`
+			      @font-face {
+                    font-family: bahnschrift;
+                    src: url('/fonts/BAHNSCHRIFT.TTF');
+                    font-weight: light;
+                  }
+				`}</style>
             </React.Fragment>
         )
     }

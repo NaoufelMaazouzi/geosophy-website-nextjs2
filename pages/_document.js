@@ -12,6 +12,7 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Red+Hat+Display&display=swap"
                         rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+                    <link rel="preload" href="/fonts/BAHNSCHRIFT.TTF" as="font" crossOrigin="" />
                 </Head>
                 <body>
                     <Main />
