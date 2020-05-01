@@ -21,7 +21,7 @@ function contactPage({ t }) {
           <div className="div-contact-form">
             <div className="message">
               <h4 className="title-message">{t('contact.envoiMessage')}</h4>
-              <form id="contact-form" method="POST" action="/php/contact-form-handle.php">
+              <form id="contact-form" method="POST" action="/contact-form-handle.php">
                 <input name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')} required />
                 <input name="email" id="email" type="email" className="form-control" placeholder={t('contact.email')} required />
                 <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('contact.telephone')} required />
