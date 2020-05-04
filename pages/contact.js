@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useFormik } from 'formik';
+import { sendContactMail } from "../components/networking/mail-api";
 import { i18n, Link, withTranslation } from '../i18n';
 
 import LayoutContact from '../components/layoutContact';
@@ -11,8 +13,70 @@ import logoLinkedin from '../public/linkedin2.svg';
 import logoYoutube from '../public/youtube2.svg';
 import logoTwitter from '../public/twitter2.svg';
 
+const initialValues = {
+  name: '',
+  email: '',
+  mobile: '',
+  company: '',
+  message: ''
+}
+
+const onSubmit = values => {
+  console.log('Form data: ', values)
+}
+
+const submitContactForm = async (event) => {
+  event.preventDefault()
+
+  const recipientMail = "naoufel.maazouzi@live.fr";
+  const { name, mail, formContent } = initialValues;
+
+  const res = await sendContactMail(recipientMail, name, mail, formContent)
+  if (res.status < 300) {
+    initialValues = {
+      name: '',
+      email: '',
+      mobile: '',
+      company: '',
+      message: ''
+    }
+  }
+}
+
+const validate = values => {
+  let errors = {}
+
+  if (!values.name) {
+    errors.name = 'Requis'
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = "Format d'email invalide"
+  }
+
+  if (!values.email) {
+    errors.email = 'Requis'
+  }
+
+  if (!values.mobile) {
+    errors.mobile = 'Requis'
+  }
+
+  if (!values.message) {
+    errors.message = 'Requis'
+  }
+
+  return errors
+}
+
+
 
 function contactPage({ t }) {
+  const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validate
+  })
+
+
   return (
     <React.Fragment>
       <main>
@@ -21,16 +85,21 @@ function contactPage({ t }) {
           <div className="div-contact-form">
             <div className="message">
               <h4 className="title-message">{t('contact.envoiMessage')}</h4>
-              <form id="contact-form" method="POST" action="/contact-form-handle.php">
-                <input name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')} required />
-                <input name="email" id="email" type="email" className="form-control" placeholder={t('contact.email')} required />
-                <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('contact.telephone')} required />
-                <input name="company" id="company" type="text" className="form-control" placeholder={t('contact.compagnie')} />
-
-                <textarea name="message" id="message" className="form-control" placeholder={t('contact.message')} rows="6"
-                  required></textarea>
-
-                <input type="submit" className="submit" name="submit" onClick="validation()" />
+              <form id="contact-form" onSubmit={formik.handleSubmit}>
+                <input name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')}
+                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.name} />
+                {formik.touched.name && formik.errors.name ? (<div className="errorMessage">{formik.errors.name}</div>) : null}
+                <input name="email" id="email" type="email" className="form-control" placeholder={t('contact.email')}
+                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} />
+                {formik.touched.email && formik.errors.email ? (<div className="errorMessage">{formik.errors.email}</div>) : null}
+                <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('contact.telephone')}
+                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.mobile} />
+                {formik.touched.mobile && formik.errors.mobile ? (<div className="errorMessage">{formik.errors.mobile}</div>) : null}
+                <input name="company" id="company" type="text" className="form-control" placeholder={t('contact.compagnie')} onChange={formik.handleChange} value={formik.values.company} />
+                <textarea name="message" id="message" className="form-control" placeholder={t('contact.message')}
+                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.message} rows="6"></textarea>
+                {formik.touched.message && formik.errors.message ? (<div className="errorMessage2">{formik.errors.message}</div>) : null}
+                <input type="submit" className="submit" name="submit" onClick={submitContactForm} />
 
               </form>
             </div>
@@ -52,12 +121,22 @@ function contactPage({ t }) {
         </section>
       </main>
       <style jsx>{`
-#contact-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
+  .errorMessage {
+    color: red;
+  } 
+  
+  .errorMessage2 {
+    color: red;
+    width: 100%;
+  }  
+
+  #contact-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
   .title-section {
     font-size: 3rem;
@@ -207,6 +286,10 @@ function contactPage({ t }) {
     /* Contact section */
   .form-control {
     width: 80%;
+  }
+
+  .errorMessage {
+    width: 100%;
   }
 
   .title-section {

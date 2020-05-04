@@ -9,6 +9,8 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "formik": "^2.1.4",
     "framer-motion": "^1.10.3",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
@@ -18,6 +20,7 @@
     "next-i18next": "^4.3.0",
     "next-images": "^1.4.0",
     "next-optimized-images": "^2.6.0",
+    "nodemailer": "^6.4.6",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
