@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
     $headers = "From: $email_from \r\n";
     $headers .= "Repondre à: $visitor_email \r\n";
     mail($to,$email_subject,$email_body,$headers);
-    header("Location: ../index.html", sleep(3));
+    header("Location: /index.js", sleep(3));
 }
 
 ?>
