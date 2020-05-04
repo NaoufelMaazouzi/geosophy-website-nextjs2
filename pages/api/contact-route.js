@@ -3,9 +3,10 @@ import nodemailer from "nodemailer"
 const emailPass = "newworld28"
 
 const transporter = nodemailer.createTransport({
-    host: "gmail",
+    host: "smtp.ionos.fr",
+    port: 25,
     auth: {
-        user: "naoufel.maazouzi@live.fr",
+        user: "contact@naoufelmaazouzi.fr",
         pass: emailPass
     }
 })
