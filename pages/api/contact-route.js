@@ -14,11 +14,6 @@ const transporter = nodemailer.createTransport({
 export default async (req, res) => {
     const { recipientMail, name, senderMail, mobile, company, content } = req.body
 
-    if (senderMail === "" || name === "" || content === "" || recipientMail === "" || mobile === "" || company === "") {
-        res.status(403).send("")
-        return
-    }
-
     const mailerRes = await mailer({ senderMail, name, text: content, recipientMail, mobile, company })
     res.send(mailerRes)
 }
