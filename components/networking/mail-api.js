@@ -13,7 +13,7 @@ export const sendContactMail = async (recipientMail, name, senderMail, mobile, c
     try {
         const res = await axios({
             method: "post",
-            url: "/api/contact",
+            url: "/api/contact-route",
             headers: {
                 "Content-Type": "application/json"
             },
