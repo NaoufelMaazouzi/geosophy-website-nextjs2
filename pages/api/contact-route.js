@@ -12,14 +12,14 @@ const transporter = nodemailer.createTransport({
 })
 
 export default async (req, res) => {
-    const { recipientMail, name, senderMail, mobile, company, content } = req.body
+    const { recipientMail, name, email, message, mobile, company } = req.body
 
-    const mailerRes = await mailer({ senderMail, name, text: content, recipientMail, mobile, company })
+    const mailerRes = await mailer({ email, name, text: message, recipientMail, mobile, company })
     res.send(mailerRes)
 }
 
-const mailer = ({ senderMail, name, text, recipientMail, mobile, company }) => {
-    const from = name && senderMail ? `${name} <${senderMail}>` : `${name || senderMail}`
+const mailer = ({ email, name, text, recipientMail, mobile, company }) => {
+    const from = name && email ? `${name} <${email}>` : `${name || email}`
     const message = {
         from,
         to: `${recipientMail}`,

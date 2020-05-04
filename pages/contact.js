@@ -29,9 +29,13 @@ const submitContactForm = async (event) => {
   event.preventDefault()
 
   const recipientMail = "naoufel.maazouzi@live.fr";
-  const { name, mail, formContent } = initialValues;
+  const name = initialValues.name;
+  const email = initialValues.email;
+  const mobile = initialValues.mobile;
+  const company = initialValues.company;
+  const message = initialValues.message;
 
-  const res = await sendContactMail(recipientMail, name, mail, formContent)
+  const res = await sendContactMail(recipientMail, name, email, message, mobile, company)
   if (res.status < 300) {
     initialValues = {
       name: '',

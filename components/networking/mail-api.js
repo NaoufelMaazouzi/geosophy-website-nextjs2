@@ -1,13 +1,13 @@
 import axios from "axios"
 
-export const sendContactMail = async (recipientMail, name, senderMail, mobile, company, content) => {
+export const sendContactMail = async (recipientMail, name, email, message, mobile, company) => {
     const data = {
         recipientMail,
         name,
-        senderMail,
+        email,
         mobile,
         company,
-        content
+        message
     }
 
     try {
