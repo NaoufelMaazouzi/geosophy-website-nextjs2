@@ -21,19 +21,16 @@ const initialValues = {
   message: ''
 }
 
-const onSubmit = values => {
-  console.log('Form data: ', values)
-}
 
-const submitContactForm = async (event) => {
-  event.preventDefault()
+const onSubmit = async (values) => {
+  console.log('Form data: ', values)
 
   const recipientMail = "naoufel.maazouzi@live.fr";
-  const name = initialValues.name;
-  const email = initialValues.email;
-  const mobile = initialValues.mobile;
-  const company = initialValues.company;
-  const message = initialValues.message;
+  const name = values.name;
+  const email = values.email;
+  const mobile = values.mobile;
+  const company = values.company;
+  const message = values.message;
 
   const res = await sendContactMail(recipientMail, name, email, message, mobile, company)
   if (res.status < 300) {
@@ -45,6 +42,12 @@ const submitContactForm = async (event) => {
       message: ''
     }
   }
+}
+
+const submitContactForm = async (event) => {
+  event.preventDefault()
+
+
 }
 
 const validate = values => {
@@ -103,7 +106,7 @@ function contactPage({ t }) {
                 <textarea name="message" id="message" className="form-control" placeholder={t('contact.message')}
                   onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.message} rows="6"></textarea>
                 {formik.touched.message && formik.errors.message ? (<div className="errorMessage2">{formik.errors.message}</div>) : null}
-                <input type="submit" className="submit" name="submit" onClick={submitContactForm} />
+                <input type="submit" className="submit" name="submit" />
 
               </form>
             </div>
