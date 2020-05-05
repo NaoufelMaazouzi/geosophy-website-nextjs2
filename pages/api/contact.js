@@ -3,7 +3,7 @@ import nodemailer from "nodemailer"
 //const emailPass = "newworld28"
 
 const transporter = nodemailer.createTransport({
-    host: "smtp-mail.outlook.com", // hostname
+    host: "SMTP.office365.com", // hostname
     secureConnection: false, // TLS requires secureConnection to be false
     port: 587, // port for secure SMTP
     tls: {
@@ -15,28 +15,17 @@ const transporter = nodemailer.createTransport({
     }
 })
 
-export default async (req, res) => {
-    const { recipientMail, name, email, message, mobile, company } = req.body
+const message = {
+    from: 'naou@live.fr', // Sender address
+    to: 'naoufel.maazouzi@live.fr',         // List of recipients
+    subject: 'Nouveau message du site Geosophy', // Subject line
+    text: 'Voici le text du mail' // Plain text body
+};
 
-    const mailerRes = await mailer({ email, name, text: message, recipientMail, mobile, company })
-    res.send(mailerRes)
-}
-
-const mailer = ({ email, name, text, recipientMail, mobile, company }) => {
-    const from = name && email ? `${name} <${email}>` : `${name || email}`
-    const message = {
-        from,
-        to: `${recipientMail}`,
-        subject: `New message from ${from}`,
-        text,
-        mobile,
-        company,
-        replyTo: from
+transporter.sendMail(message, function (err, info) {
+    if (err) {
+        console.log(err)
+    } else {
+        console.log(info);
     }
-
-    return new Promise((resolve, reject) => {
-        transporter.sendMail(message, (error, info) =>
-            error ? reject(error) : resolve(info)
-        )
-    })
-}
+});
