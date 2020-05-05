@@ -13,7 +13,7 @@ import logoLinkedin from '../public/linkedin2.svg';
 import logoYoutube from '../public/youtube2.svg';
 import logoTwitter from '../public/twitter2.svg';
 
-const initialValues = {
+let initialValues = {
   name: '',
   email: '',
   mobile: '',
@@ -21,28 +21,30 @@ const initialValues = {
   message: ''
 }
 
-const onSubmit = values => {
-  console.log('Form data: ', values)
-}
+const onSubmit = async values => {
 
-const submitContactForm = async (event) => {
-  event.preventDefault()
+  const recipientMail = 'naoufel.maazouzi@live.fr'
+  const name = values.name;
+  const mail = values.email;
+  const formContent = values.message;
 
-  const recipientMail = "naoufel.maazouzi@live.fr";
-  const { name, mail, formContent } = initialValues;
-  console.log(initialValues.name);
 
   const res = await sendContactMail(recipientMail, name, mail, formContent)
   if (res.status < 300) {
-    initialValues = {
+    values = {
       name: '',
       email: '',
       mobile: '',
       company: '',
       message: ''
     }
+
+  } else {
+    console.log("failed")
   }
 }
+
+
 
 const validate = values => {
   let errors = {}
@@ -69,7 +71,6 @@ const validate = values => {
 }
 
 
-
 function contactPage({ t }) {
   const formik = useFormik({
     initialValues,
@@ -77,7 +78,8 @@ function contactPage({ t }) {
     validate
   })
 
-  console.log(formik.touched)
+
+
 
   return (
     <React.Fragment>
@@ -101,7 +103,7 @@ function contactPage({ t }) {
                 <textarea name="message" id="message" className="form-control" placeholder={t('contact.message')}
                   onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.message} rows="6"></textarea>
                 {formik.touched.message && formik.errors.message ? (<div className="errorMessage2">{formik.errors.message}</div>) : null}
-                <input type="submit" className="submit" name="submit" onClick={submitContactForm} />
+                <input type="submit" className="submit" name="submit" />
 
               </form>
             </div>

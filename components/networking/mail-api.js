@@ -1,19 +1,17 @@
 import axios from "axios"
 
-export const sendContactMail = async (recipientMail, name, email, message, mobile, company) => {
+export const sendContactMail = async (recipientMail, name, senderMail, content) => {
     const data = {
         recipientMail,
         name,
-        email,
-        mobile,
-        company,
-        message
+        senderMail,
+        content
     }
 
     try {
         const res = await axios({
             method: "post",
-            url: "/api/contact",
+            url: "/api/contact-route",
             headers: {
                 "Content-Type": "application/json"
             },
