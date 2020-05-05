@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormik } from 'formik';
+import { useState } from 'react';
 import { sendContactMail } from "../components/networking/mail-api";
 import { i18n, Link, withTranslation } from '../i18n';
 
@@ -13,36 +14,12 @@ import logoLinkedin from '../public/linkedin2.svg';
 import logoYoutube from '../public/youtube2.svg';
 import logoTwitter from '../public/twitter2.svg';
 
-const initialValues = {
-  name: '',
-  email: '',
-  mobile: '',
-  company: '',
-  message: ''
-}
 
 
-const onSubmit = async (values) => {
-  console.log('Form data: ', values)
 
-  const recipientMail = "naoufel.maazouzi@live.fr";
-  const name = values.name;
-  const email = values.email;
-  const mobile = values.mobile;
-  const company = values.company;
-  const message = values.message;
 
-  const res = await sendContactMail(recipientMail, name, email, message, mobile, company)
-  if (res.status < 300) {
-    initialValues = {
-      name: '',
-      email: '',
-      mobile: '',
-      company: '',
-      message: ''
-    }
-  }
-}
+
+
 
 const submitContactForm = async (event) => {
   event.preventDefault()
@@ -76,12 +53,62 @@ const validate = values => {
 
 
 
+
+
+
 function contactPage({ t }) {
+
+  const initialValues = {
+    name: '',
+    email: '',
+    mobile: '',
+    company: '',
+    message: '',
+    accessKey: 'b2368abe-3c6c-4062-a258-c82fe6a7e305'
+  }
+
+  const onSubmit = async values => {
+    console.log(values);
+    try {
+      const res = await fetch('https://api.staticforms.xyz/submit', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      const json = await res.json();
+
+      if (json.success) {
+        setResponse({
+          type: 'success',
+          message: 'Thank you for reaching out to us.'
+        });
+      } else {
+        setResponse({
+          type: 'error',
+          message: json.message
+        });
+      }
+    } catch (e) {
+      console.log('An error occurred', e);
+      setResponse({
+        type: 'error',
+        message: 'An error occured while submitting the form'
+      });
+    }
+  };
+
   const formik = useFormik({
     initialValues,
     onSubmit,
     validate
   })
+
+  const [response, setResponse] = useState({
+    type: '',
+    message: ''
+  });
+
 
 
   return (
@@ -92,7 +119,8 @@ function contactPage({ t }) {
           <div className="div-contact-form">
             <div className="message">
               <h4 className="title-message">{t('contact.envoiMessage')}</h4>
-              <form id="contact-form" onSubmit={formik.handleSubmit}>
+              <form id="contact-form" onSubmit={formik.handleSubmit} action='https://api.staticforms.xyz/submit'
+                method='post'>
                 <input name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')}
                   onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.name} />
                 {formik.touched.name && formik.errors.name ? (<div className="errorMessage">{formik.errors.name}</div>) : null}
