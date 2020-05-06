@@ -10,7 +10,9 @@ const transporter = nodemailer.createTransport({
     auth: {
         type: 'OAuth2',
         user: 'maazouzi.naoufel@gmail.com',
-        accessToken: 'ya29.a0Ae4lvC1WN-OSwvWLSEcdhKgmdsYz8IUm5dQn5xVrhWLyBtbC3d6tZjEyxrqk5eEP8-0ZPdvUrT9QwxeYn03Bo6nm_tnqygl9-tkW_y86DQ65UQu5DzRCZfuK0bha-X46ZCWj_r_dYC9PQTV3wlCEXBuzQAWm1r8mHNk'
+        refreshToken: '1//04NX-VSysOvHsCgYIARAAGAQSNwF-L9IrnuuAivWVE5ktRUSXRvctt5Ec7yLupoZPdknF8XQDgDtso8Yx22jcTDv0qzNzt1LN3JY',
+        clientId: '377420568569-r1iehgs5n76af1m71ps3m55gf17lqvk3.apps.googleusercontent.com',
+        clientSecret: '8dPxc3qp3qmvowBS2DsVuprR'
     }
 })
 
