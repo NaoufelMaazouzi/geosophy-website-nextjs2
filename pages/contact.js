@@ -34,7 +34,6 @@ const onSubmit = async values => {
 
   const res = await sendContactMail(name, email, formContent, mobile, company)
   if (res.status < 300) {
-    console.log(mail)
     values = {
       name: '',
       email: '',

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "formik": "^2.1.4",
     "framer-motion": "^1.10.3",
     "imagemin-mozjpeg": "^8.0.0",
