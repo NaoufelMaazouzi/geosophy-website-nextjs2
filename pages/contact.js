@@ -23,14 +23,18 @@ let initialValues = {
 
 const onSubmit = async values => {
 
-  const recipientMail = 'naoufel.maazouzi@live.fr'
   const name = values.name;
-  const mail = values.email;
+  const email = values.email;
   const formContent = values.message;
+  const mobile = values.mobile;
+  const company = values.company;
 
 
-  const res = await sendContactMail(recipientMail, name, mail, formContent)
+
+
+  const res = await sendContactMail(name, email, formContent, mobile, company)
   if (res.status < 300) {
+    console.log(mail)
     values = {
       name: '',
       email: '',
