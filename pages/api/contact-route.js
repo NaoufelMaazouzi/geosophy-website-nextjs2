@@ -4,11 +4,14 @@ import nodemailer from "nodemailer"
 //const emailPass = "newworld28"
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    host: "smtp-mail.outlook.com", // hostname
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 465, // port for secure SMTP
+    tls: {
+        ciphers: 'SSLv3'
+    },
     auth: {
-        user: 'maazouzi.naoufel@gmail.com',
+        user: 'naoufel.maazouzi@live.fr',
         pass: 'newworld28'
     }
 })
