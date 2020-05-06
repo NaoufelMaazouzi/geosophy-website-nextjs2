@@ -9,10 +9,10 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         type: 'OAuth2',
-        user: process.env.EMAIL,
-        refreshToken: process.env.REFRESH_TOKEN,
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET
+        user: 'maazouzi.naoufel@gmail.com',
+        refreshToken: '1//04NX-VSysOvHsCgYIARAAGAQSNwF-L9IrnuuAivWVE5ktRUSXRvctt5Ec7yLupoZPdknF8XQDgDtso8Yx22jcTDv0qzNzt1LN3JY',
+        clientId: '377420568569-r1iehgs5n76af1m71ps3m55gf17lqvk3.apps.googleusercontent.com',
+        clientSecret: '8dPxc3qp3qmvowBS2DsVuprR'
     }
 })
 
