@@ -4,11 +4,13 @@ import nodemailer from "nodemailer"
 //const emailPass = "newworld28"
 
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: 'smtp.gmail.com',
     port: 465,
+    secure: true,
     auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD
+        type: 'OAuth2',
+        user: 'maazouzi.naoufel@gmail.com',
+        accessToken: 'ya29.a0Ae4lvC1WN-OSwvWLSEcdhKgmdsYz8IUm5dQn5xVrhWLyBtbC3d6tZjEyxrqk5eEP8-0ZPdvUrT9QwxeYn03Bo6nm_tnqygl9-tkW_y86DQ65UQu5DzRCZfuK0bha-X46ZCWj_r_dYC9PQTV3wlCEXBuzQAWm1r8mHNk'
     }
 })
 
