@@ -13,6 +13,7 @@
     "dotenv": "^8.2.0",
     "formik": "^2.1.4",
     "framer-motion": "^1.10.3",
+    "googleapis": "^50.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
