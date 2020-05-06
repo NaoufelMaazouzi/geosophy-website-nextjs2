@@ -9,10 +9,10 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         type: 'OAuth2',
-        user: 'maazouzi.naoufel@gmail.com',
-        refreshToken: '1//04NX-VSysOvHsCgYIARAAGAQSNwF-L9IrnuuAivWVE5ktRUSXRvctt5Ec7yLupoZPdknF8XQDgDtso8Yx22jcTDv0qzNzt1LN3JY',
-        clientId: '377420568569-r1iehgs5n76af1m71ps3m55gf17lqvk3.apps.googleusercontent.com',
-        clientSecret: '8dPxc3qp3qmvowBS2DsVuprR'
+        user: process.env.EMAIL,
+        refreshToken: process.env.REFRESH_TOKEN,
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET
     }
 })
 
@@ -33,7 +33,14 @@ const mailer = ({ mail, name, text, mobile, company }) => {
         from: from,
         to: 'naoufel.maazouzi@live.fr, naoufel_du_28@live.fr',
         subject: `Nouveau message de ${name} (provenant du site Geosophy)`,
-        html: '<h4>Voici le message qui vous a été écrit: </h4>' + text + '<br>' + '<br><h4>Informations sur la personne: </h4><ul><li>Nom: ' + name + '</li><li>Adresse mail: ' + mail + '</li><li>Numéro de téléphone: ' + mobile + '</li><li>Companie: ' + company + '</li></ul>',
+        html: `<h4>Voici le message qui vous a été écrit: </h4> ${text} <br><br> 
+               <h4>Informations sur la personne: </h4>
+                    <ul>
+                        <li><b>Nom:</b>  ${name} </li>
+                        <li><b>Adresse mail:</b> ${mail}</li>
+                        <li><b>Numéro de téléphone:</b> ${mobile}</li>
+                        <li><b>Compagnie:</b> ${company} </li>
+                    </ul>`,
         replyTo: from
     }
 
