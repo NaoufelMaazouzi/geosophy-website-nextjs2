@@ -19,6 +19,13 @@ const transporter = nodemailer.createTransport({
 export default async (req, res) => {
     const { name, mail, content, mobile, company } = req.body
 
+    if (mail === "" || name === "" || content === "" || mobile === "") {
+        res.status(403).send("")
+        console.log("les champs ne sont pas tous remplis")
+        return
+    }
+
+
 
     const mailerRes = await mailer({ mail, name, text: content, mobile, company })
     res.send(mailerRes)

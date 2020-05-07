@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useFormik } from 'formik';
 import { sendContactMail } from "../components/networking/mail-api";
 import { i18n, Link, withTranslation } from '../i18n';
+import Swal from 'sweetalert2';
 
 import LayoutContact from '../components/layoutContact';
 
@@ -21,6 +22,9 @@ let initialValues = {
   message: ''
 }
 
+let errors;
+
+
 const onSubmit = async values => {
 
   const name = values.name;
@@ -29,6 +33,18 @@ const onSubmit = async values => {
   const mobile = values.mobile;
   const company = values.company;
 
+  console.log(name.length)
+
+  if (name && email && formContent && mobile) {
+    Swal.fire({
+      title: 'Succès !',
+      text: 'Votre message a été envoyé',
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })
+  }
+
+  console.log(errors)
 
 
 
@@ -48,9 +64,9 @@ const onSubmit = async values => {
 }
 
 
-
 const validate = values => {
-  let errors = {}
+  errors = {}
+
 
   if (!values.name) {
     errors.name = 'Requis'
@@ -74,12 +90,41 @@ const validate = values => {
 }
 
 
+
 function contactPage({ t }) {
   const formik = useFormik({
     initialValues,
     onSubmit,
     validate
   })
+
+  const validation = async values => {
+    const name = values.name;
+    const email = values.email;
+    const formContent = values.message;
+    const mobile = values.mobile;
+    const company = values.company;
+
+    if (name && email && formContent && mobile && company) {
+      Swal.fire({
+        title: 'Succès !',
+        text: 'Votre message a été envoyé',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+    } else {
+      Swal.fire({
+        title: 'Raté !',
+        text: 'Veuillez remplir les champs nécessaires',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
+    }
+  }
+
+
+
+
 
 
 
@@ -106,7 +151,7 @@ function contactPage({ t }) {
                 <textarea name="message" id="message" className="form-control" placeholder={t('contact.message')}
                   onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.message} rows="6"></textarea>
                 {formik.touched.message && formik.errors.message ? (<div className="errorMessage2">{formik.errors.message}</div>) : null}
-                <input type="submit" className="submit" name="submit" />
+                <input type="submit" className="submit" name="submit" onClick={validation} />
 
               </form>
             </div>

@@ -17,6 +17,7 @@ class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
                 </body>
             </Html>
         )
