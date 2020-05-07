@@ -533,6 +533,10 @@ function equipePage({ t }) {
 
 equipePage.Layout = LayoutEquipe;
 
+equipePage.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
 equipePage.propTypes = {
   t: PropTypes.func.isRequired,
 }

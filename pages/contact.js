@@ -391,6 +391,10 @@ function contactPage({ t }) {
 
 contactPage.Layout = LayoutContact;
 
+contactPage.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
 contactPage.propTypes = {
   t: PropTypes.func.isRequired,
 }

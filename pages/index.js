@@ -326,6 +326,10 @@ function Homepage({ t }) {
 
 Homepage.Layout = LayoutGeosophy;
 
+Homepage.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
 Homepage.propTypes = {
   t: PropTypes.func.isRequired,
 }

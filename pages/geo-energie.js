@@ -324,6 +324,10 @@ function geoenergiePage({ t }) {
 
 geoenergiePage.Layout = LayoutGeoenergie;
 
+geoenergiePage.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
 geoenergiePage.propTypes = {
   t: PropTypes.func.isRequired,
 }
