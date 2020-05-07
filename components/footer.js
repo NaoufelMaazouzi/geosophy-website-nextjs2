@@ -40,120 +40,130 @@ function Footer({ t }) {
       </footer>
       <style jsx>{`
             .footer {
-                background-color: #1d222b;
-                display: -webkit-box;
-                display: flex;
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                flex-direction: row;
-                justify-content: space-around;
-                flex-wrap: wrap;
-                -webkit-box-align: center;
-                align-items: center;
-                margin-top: 5%;
-              }
-              
-              .div-address {
-                text-align: center;
-                width: 33.33%;
-                color: white;
-                margin-top: 2%;
-                line-height: 40px;
-              }
-              
-              .div-address a {
-                text-decoration: none;
-                color: #57b1dd;
-                cursor: pointer;
-              }
-              
-              .div-social-media {
-                width: 33.33%;
-                display: -webkit-box;
-                display: flex;
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                flex-direction: row;
-                -webkit-box-pack: space-evenly;
-                justify-content: space-evenly;
-                margin-top: 2%;
-              }
-              
-              .div-contact {
-                width: 33.33%;
-                text-align: center;
-                margin-top: 2%;
-                line-height: 40px;
-              }
-              
-              .footer-links {
-                list-style: none;
-              }
-              
-              .footer-links li {
-                text-decoration: none;
-                color: white;
-              }
-              
-              .footer-links li a {
-                text-decoration: none;
-                color: white;
-                position: relative;
-                cursor: pointer;
-              }
-              
-              .contact-menu::after {
-                content: "";
-                width: 40px;
-                height: 1.5px;
-                background: white;
-                border-radius: 12px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: 0 auto;
-                -webkit-transform: translateY(5px);
-                transform: translateY(5px);
-              }
-              
-              .logo-social-media {
-                width: 150%;
-              }
-              
-              .div-copyright {
-                color: white;
-                align-self: flex-end;
-                text-align: center;
-                width: 100%;
-                margin-top: 2%;
-              }
-
-          @media (max-width: 768px) {
+              background-color: #1d222b;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+              margin-top: 5%;
+            }
+            
+            .div-address {
+              text-align: center;
+              width: 33.33%;
+              color: white;
+              margin-top: 2%;
+              line-height: 40px;
+            }
+            
+            .div-address a {
+              text-decoration: none;
+              color: #57b1dd;
+              cursor: pointer;
+            }
+            
             .div-social-media {
-                width: 100%;
-              }
+              width: 33.33%;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+              -webkit-box-pack: space-evenly;
+              -ms-flex-pack: space-evenly;
+                  justify-content: space-evenly;
+              margin-top: 2%;
+            }
+            
+            .div-contact {
+              width: 33.33%;
+              text-align: center;
+              margin-top: 2%;
+              line-height: 40px;
+            }
+            
+            .footer-links {
+              list-style: none;
+            }
+            
+            .footer-links li {
+              text-decoration: none;
+              color: white;
+            }
+            
+            .footer-links li a {
+              text-decoration: none;
+              color: white;
+              position: relative;
+              cursor: pointer;
+            }
+            
+            .contact-menu::after {
+              content: "";
+              width: 40px;
+              height: 1.5px;
+              background: white;
+              border-radius: 12px;
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: 0 auto;
+              -webkit-transform: translateY(5px);
+              -ms-transform: translateY(5px);
+                  transform: translateY(5px);
+            }
+            
+            .logo-social-media {
+              width: 150%;
+            }
+            
+            .div-copyright {
+              color: white;
+              -ms-flex-item-align: end;
+                  align-self: flex-end;
+              text-align: center;
+              width: 100%;
+              margin-top: 2%;
+            }
 
-              .logo-social-media {
-                width: 100%;
-              }
+        @media (max-width: 768px) {
+          .div-social-media {
+              width: 100%;
+            }
 
-              .contact-menu::after {
-                content: "";
-                width: 25px;
-              }
-        }
-
-        @media (max-width: 420px) {
-          .logo-social-media {
+            .logo-social-media {
               width: 100%;
             }
 
             .contact-menu::after {
               content: "";
-              width: 15px;
+              width: 25px;
             }
       }
+
+      @media (max-width: 420px) {
+        .logo-social-media {
+            width: 100%;
+          }
+
+          .contact-menu::after {
+            content: "";
+            width: 15px;
+          }
+    }
       `}</style>
     </React.Fragment>
   )

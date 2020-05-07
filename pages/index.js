@@ -67,14 +67,18 @@ function Homepage({ t }) {
 
         #presentation-section {
           display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-          flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
           -webkit-box-align: center;
-          align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
           -webkit-box-pack: center;
-          justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
         }
         
         .title-section {
@@ -99,7 +103,8 @@ function Homepage({ t }) {
           bottom: 0;
           margin: 0 auto;
           -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+          -ms-transform: translateY(10px);
+              transform: translateY(10px);
         }
         
         .div-text-subhead {
@@ -130,14 +135,18 @@ function Homepage({ t }) {
           background-repeat: no-repeat;
           height: 80vh;
           display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
-          flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
           -webkit-box-pack: center;
-          justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
           -webkit-box-align: center;
-          align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
         }
         
         .headband-hook {
@@ -153,14 +162,18 @@ function Homepage({ t }) {
         
         .call-action-section {
           display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-          flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
           -webkit-box-align: center;
-          align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
           -webkit-box-pack: center;
-          justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
         }
         
         .div-call-action {
@@ -194,6 +207,8 @@ function Homepage({ t }) {
         
         .blueButton {
           background-color: #57b1dd;
+          -webkit-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
         }
         
@@ -203,6 +218,8 @@ function Homepage({ t }) {
         
         .greenButton {
           background-color: #7bd444;
+          -webkit-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
         }
         
@@ -214,14 +231,19 @@ function Homepage({ t }) {
         
         .references-section {
           display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
-          flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
           -webkit-box-align: center;
-          align-items: center;
-          justify-content: space-around;
-          flex-wrap: wrap;
+          -ms-flex-align: center;
+              align-items: center;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
           margin-top: 5%;
           margin-bottom: 10%;
           /*background-color: #f5f5f5;*/
@@ -232,15 +254,22 @@ function Homepage({ t }) {
           height: 100px;
           position: relative;
           background: white;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           overflow: hidden;
         }
 
         .slide {
           height: 100px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          align-items: center;
-          animation: slideshow 40s linear infinite;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-animation: slideshow 40s linear infinite;
+                  animation: slideshow 40s linear infinite;
         }
 
         .slide img {
@@ -248,12 +277,25 @@ function Homepage({ t }) {
           padding: 0 50px 0 50px;
         }
         
-        @keyframes slideshow {
+        @-webkit-keyframes slideshow {
           0% {
-            transform: translateX(0);
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
           }
           100% {
-            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+                    transform: translateX(-100%);
+          }
+        }
+        
+        @keyframes slideshow {
+          0% {
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+          }
+          100% {
+            -webkit-transform: translateX(-100%);
+                    transform: translateX(-100%);
           }
         }
 
@@ -263,6 +305,8 @@ function Homepage({ t }) {
           width: 200px;
           position: absolute;
           content: "";
+          background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+          background: -o-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
           background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
           z-index: 1;
         }
@@ -275,7 +319,9 @@ function Homepage({ t }) {
         .slider::after {
           right: 0;
           top: 0;
-          transform: rotateZ(180deg);
+          -webkit-transform: rotateZ(180deg);
+              -ms-transform: rotate(180deg);
+                  transform: rotateZ(180deg);
         }
 
         @media (max-width: 420px) { 
@@ -311,7 +357,8 @@ function Homepage({ t }) {
       }
 
       .slide {
-        animation: slideshow 20s linear infinite;
+        -webkit-animation: slideshow 20s linear infinite;
+                animation: slideshow 20s linear infinite;
       }
 
       .slider::before,

@@ -30,7 +30,8 @@
         "compagnie": "Compagnie",
         "message": "Votre message",
         "valider": "Valider",
-        "informationsTitle": "Informations de contact"
+        "informationsTitle": "Informations de contact",
+        "validation": "Valider"
     },
     "equipe": {
         "question": "Une question ? N'hésitez pas à nous contacter !",

@@ -20,7 +20,8 @@ const LayoutContact = ({ children }) => {
         * {
           margin: 0;
           padding: 0;
-          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
         }
         
         body {
@@ -51,19 +52,21 @@ const LayoutContact = ({ children }) => {
       `}</style>
       <style jsx>{` 
       .contact {
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
-  url(${BandeauContact});
-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${BandeauContact});
-background-position: center bottom;
-background-size: cover;
-background-repeat: no-repeat;
-height: 100vh;
-display: -webkit-box;
-display: flex;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-flex-direction: column;
-}
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(${BandeauContact});
+        background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${BandeauContact});
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${BandeauContact});
+        background-position: center bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        }
       `}</style>
     </React.Fragment>
   )

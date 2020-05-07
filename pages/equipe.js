@@ -148,16 +148,21 @@ function equipePage({ t }) {
       <style jsx>{`
             /***************************************** PRESENTATION SECTION *****************************************/
 
-            #presentation-section {
+
+#presentation-section {
               display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
               -webkit-box-orient: vertical;
               -webkit-box-direction: normal;
-              flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
               -webkit-box-align: center;
-              align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
               -webkit-box-pack: center;
-              justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
             }
             
             .title-section {
@@ -201,7 +206,8 @@ function equipePage({ t }) {
                 bottom: 0;
                 margin: 0 auto;
                 -webkit-transform: translateY(10px);
-                transform: translateY(10px);
+                -ms-transform: translateY(10px);
+                    transform: translateY(10px);
               }
 
 
@@ -209,22 +215,30 @@ function equipePage({ t }) {
 
             .schemas-section {
             display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             -webkit-box-align: center;
-            align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
             }
 
             .div-schemas {
             width: 100%;
             height: 100%;
             display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
             -webkit-box-align: center;
-            align-items: center;
-            flex-wrap: wrap;
+            -ms-flex-align: center;
+                align-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             padding-top: 5%;
             padding-bottom: 5%;
             text-align: center;
@@ -271,11 +285,20 @@ function equipePage({ t }) {
 
             .person-section {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             }
 
             .div-person {
@@ -304,7 +327,8 @@ function equipePage({ t }) {
             bottom: 0;
             margin: 0 auto;
             -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+            -ms-transform: translateY(10px);
+                transform: translateY(10px);
             }
 
             .img-person {
@@ -321,14 +345,19 @@ function equipePage({ t }) {
         
             .references-section {
               display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
               -webkit-box-orient: horizontal;
               -webkit-box-direction: normal;
-              flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
               -webkit-box-align: center;
-              align-items: center;
-              justify-content: space-around;
-              flex-wrap: wrap;
+              -ms-flex-align: center;
+                  align-items: center;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
               margin-top: 5%;
               margin-bottom: 10%;
               /*background-color: #f5f5f5;*/
@@ -339,15 +368,22 @@ function equipePage({ t }) {
               height: 100px;
               position: relative;
               background: white;
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
               overflow: hidden;
             }
     
             .slide {
               height: 100px;
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
-              align-items: center;
-              animation: slideshow 40s linear infinite;
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              -webkit-animation: slideshow 40s linear infinite;
+                      animation: slideshow 40s linear infinite;
             }
     
             .slide img {
@@ -355,12 +391,25 @@ function equipePage({ t }) {
               padding: 0 50px 0 50px;
             }
             
-            @keyframes slideshow {
+            @-webkit-keyframes slideshow {
               0% {
-                transform: translateX(0);
+                -webkit-transform: translateX(0);
+                        transform: translateX(0);
               }
               100% {
-                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                        transform: translateX(-100%);
+              }
+            }
+            
+            @keyframes slideshow {
+              0% {
+                -webkit-transform: translateX(0);
+                        transform: translateX(0);
+              }
+              100% {
+                -webkit-transform: translateX(-100%);
+                        transform: translateX(-100%);
               }
             }
     
@@ -370,6 +419,8 @@ function equipePage({ t }) {
               width: 200px;
               position: absolute;
               content: "";
+              background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+              background: -o-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
               background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
               z-index: 1;
             }
@@ -382,7 +433,9 @@ function equipePage({ t }) {
             .slider::after {
               right: 0;
               top: 0;
-              transform: rotateZ(180deg);
+              -webkit-transform: rotateZ(180deg);
+                  -ms-transform: rotate(180deg);
+                      transform: rotateZ(180deg);
             }
 
 
@@ -390,14 +443,18 @@ function equipePage({ t }) {
 
         .call-action-section {
         display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
         -webkit-box-align: center;
-        align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
         -webkit-box-pack: center;
-        justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
         }
 
         .div-call-action {
@@ -431,6 +488,8 @@ function equipePage({ t }) {
 
         .blueButton {
         background-color: #57b1dd;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         }
 
@@ -476,7 +535,8 @@ function equipePage({ t }) {
       }
 
       .slide {
-        animation: slideshow 20s linear infinite;
+        -webkit-animation: slideshow 20s linear infinite;
+                animation: slideshow 20s linear infinite;
       }
 
       .slider::before,

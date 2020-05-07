@@ -30,7 +30,8 @@
         "compagnie": "Company",
         "message": "Your message",
         "valider": "Validate",
-        "informationsTitle": "Contact information"
+        "informationsTitle": "Contact information",
+        "validation": "Validate"
     },
     "equipe": {
         "equipeTitle": "The geosophy team",

@@ -87,14 +87,18 @@ function geoenergiePage({ t }) {
 
         #presentation-section {
           display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-          flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
           -webkit-box-align: center;
-          align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
           -webkit-box-pack: center;
-          justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
         }
         
         .title-section {
@@ -138,21 +142,26 @@ function geoenergiePage({ t }) {
             bottom: 0;
             margin: 0 auto;
             -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+            -ms-transform: translateY(10px);
+                transform: translateY(10px);
           }
 
           /***************************************** CALL TO ACTION SECTION *****************************************/
 
         .call-action-section {
         display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
         -webkit-box-align: center;
-        align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
         -webkit-box-pack: center;
-        justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
         }
 
         .div-call-action {
@@ -186,6 +195,8 @@ function geoenergiePage({ t }) {
 
         .blueButton {
         background-color: #57b1dd;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         }
 
@@ -195,6 +206,8 @@ function geoenergiePage({ t }) {
 
         .greenButton {
         background-color: #7bd444;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         }
 
@@ -206,22 +219,30 @@ function geoenergiePage({ t }) {
 
         .schemas-section {
         display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         -webkit-box-align: center;
-        align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
         }
 
         .div-schemas {
         width: 100%;
         height: 100%;
         display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         -webkit-box-align: center;
-        align-items: center;
-        flex-wrap: wrap;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         padding-top: 5%;
         padding-bottom: 5%;
         text-align: center;

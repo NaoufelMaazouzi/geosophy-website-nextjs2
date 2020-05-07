@@ -22,7 +22,8 @@ const LayoutGeosophy = ({ children }) => {
         * {
           margin: 0;
           padding: 0;
-          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
         }
         
         body {
@@ -53,18 +54,20 @@ const LayoutGeosophy = ({ children }) => {
       `}</style>
       <style jsx>{` 
       .geosophy {
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
-          url(${BandeauGeosophy});
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(${BandeauGeosophy});
+        background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${BandeauGeosophy});
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${BandeauGeosophy});
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
         display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
       }
       `}</style>
     </React.Fragment>
