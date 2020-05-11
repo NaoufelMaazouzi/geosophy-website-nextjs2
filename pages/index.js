@@ -18,7 +18,7 @@ function Homepage({ t }) {
     <React.Fragment>
       <main>
         <section id="presentation-section">
-          <h2 className="title-section">{t('main.titre1Index')}</h2>
+          <h2 className="title-section">{t('main.titleIndex1')}</h2>
           <div className="div-text-subhead">
             <p className="first-text-subhead">{t('main.geoenergisez')}</p>
             <p className="second-text-subhead">{t('main.geoenergisez2')}</p>
@@ -28,7 +28,7 @@ function Homepage({ t }) {
           <p className="headband-hook">{t('main.headbandHook')}</p>
         </section>
         <section className="call-action-section">
-          <h2 className="title-section">{t('main.titreIndex2')}</h2>
+          <h2 className="title-section">{t('main.titleIndex2')}</h2>
           <div className="div-text-subhead">
             <p className="first-text-subhead">{t('main.textLogiciel1')}</p>
             <p className="second-text-subhead">{t('main.textLogiciel2')}</p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import App from 'next/app';
+import "../styles/styleContact.css";
 import { appWithTranslation } from '../i18n';
 const Noop = ({ children }) => children
 

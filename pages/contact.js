@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useFormik } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import { sendContactMail } from "../components/networking/mail-api";
 import { i18n, Link, withTranslation } from '../i18n';
 import Swal from 'sweetalert2';
@@ -22,18 +23,12 @@ let initialValues = {
   message: ''
 }
 
-let errors;
-
-
-const onSubmit = async values => {
-
+const onSubmit = async (values, { resetForm }) => {
   const name = values.name;
   const email = values.email;
   const formContent = values.message;
   const mobile = values.mobile;
   const company = values.company;
-
-  console.log(name.length)
 
   if (name && email && formContent && mobile) {
     Swal.fire({
@@ -42,61 +37,20 @@ const onSubmit = async values => {
       icon: 'success',
       confirmButtonText: 'Cool'
     })
+    resetForm({ values: '' })
   }
-
-  console.log(errors)
-
-
-
   const res = await sendContactMail(name, email, formContent, mobile, company)
-  if (res.status < 300) {
-    values = {
-      name: '',
-      email: '',
-      mobile: '',
-      company: '',
-      message: ''
-    }
-
-  } else {
-    console.log("failed")
-  }
 }
 
-
-const validate = values => {
-  errors = {}
-
-
-  if (!values.name) {
-    errors.name = 'Requis'
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Format d'email invalide"
-  }
-
-  if (!values.email) {
-    errors.email = 'Requis'
-  }
-
-  if (!values.mobile) {
-    errors.mobile = 'Requis'
-  }
-
-  if (!values.message) {
-    errors.message = 'Requis'
-  }
-
-  return errors
-}
-
+const validationSchema = Yup.object({
+  name: Yup.string().required('Requis'),
+  email: Yup.string().email("Format d'email invalide").required('Requis'),
+  mobile: Yup.string().required('Requis'),
+  message: Yup.string().required('Requis'),
+})
 
 
 function contactPage({ t }) {
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-    validate
-  })
 
   const validation = async values => {
     const name = values.name;
@@ -105,14 +59,7 @@ function contactPage({ t }) {
     const mobile = values.mobile;
     const company = values.company;
 
-    if (name && email && formContent && mobile && company) {
-      Swal.fire({
-        title: 'Succès !',
-        text: 'Votre message a été envoyé',
-        icon: 'success',
-        confirmButtonText: 'Cool'
-      })
-    } else {
+    if (!name && !email && !formContent && !mobile && !company) {
       Swal.fire({
         title: 'Raté !',
         text: 'Veuillez remplir les champs nécessaires',
@@ -122,6 +69,7 @@ function contactPage({ t }) {
     }
   }
 
+
   return (
     <React.Fragment>
       <main>
@@ -130,23 +78,26 @@ function contactPage({ t }) {
           <div className="div-contact-form">
             <div className="message">
               <h4 className="title-message">{t('contact.envoiMessage')}</h4>
-              <form id="contact-form" onSubmit={formik.handleSubmit}>
-                <input name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')}
-                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.name} />
-                {formik.touched.name && formik.errors.name ? (<div className="errorMessage">{formik.errors.name}</div>) : null}
-                <input name="email" id="email" type="email" className="form-control" placeholder={t('contact.email')}
-                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} />
-                {formik.touched.email && formik.errors.email ? (<div className="errorMessage">{formik.errors.email}</div>) : null}
-                <input name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('contact.telephone')}
-                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.mobile} />
-                {formik.touched.mobile && formik.errors.mobile ? (<div className="errorMessage">{formik.errors.mobile}</div>) : null}
-                <input name="company" id="company" type="text" className="form-control" placeholder={t('contact.compagnie')} onChange={formik.handleChange} value={formik.values.company} />
-                <textarea name="message" id="message" className="form-control" placeholder={t('contact.message')}
-                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.message} rows="6"></textarea>
-                {formik.touched.message && formik.errors.message ? (<div className="errorMessage2">{formik.errors.message}</div>) : null}
-                <input type="submit" className="submit" name="submit" onClick={validation} value={t('contact.validation')} />
+              <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
+                <Form id="contact-form">
+                  <Field name="name" id="name" type="text" className="form-control" placeholder={t('contact.nom')} />
+                  <ErrorMessage name="name">{msg => <div className="errorMessage">{msg}</div>}</ErrorMessage>
 
-              </form>
+                  <Field name="email" id="email" type="email" className="form-control" placeholder={t('contact.email')} onSubmit={() => value = ''} />
+                  <ErrorMessage name="email">{msg => <div className="errorMessage">{msg}</div>}</ErrorMessage>
+
+                  <Field name="mobile" id="mobile" type="tel" className="form-control" placeholder={t('contact.telephone')} />
+                  <ErrorMessage name="mobile">{msg => <div className="errorMessage">{msg}</div>}</ErrorMessage>
+
+                  <Field name="company" id="company" type="text" className="form-control" placeholder={t('contact.compagnie')} />
+
+                  <Field as='textarea' name="message" id="message" className="form-control" placeholder={t('contact.message')} rows="6"></Field>
+                  <ErrorMessage name="message">{msg => <div className="errorMessage">{msg}</div>}</ErrorMessage>
+
+                  <Field type="submit" className="submit" name="submit" onClick={validation} value={t('contact.validation')} />
+
+                </Form>
+              </Formik>
             </div>
             <div className="informations">
               <h4 className="title-informations">{t('contact.informationsTitle')}</h4>
@@ -165,283 +116,7 @@ function contactPage({ t }) {
           </div>
         </section>
       </main>
-      <style jsx>{`
 
-.errorMessage {
-  color: red;
-} 
-
-.errorMessage2 {
-  color: red;
-  width: 100%;
-}  
-
-#contact-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-.title-section {
-  font-size: 3rem;
-  padding-top: 5%;
-  position: relative;
-  text-align: center;
-  font-family: bahnschrift;
-  font-weight: 400;
-  width: 80%;
-}
-
-#title-cyan::after {
-  content: "";
-  width: 120px;
-  height: 1.5px;
-  background: #00736d;
-  border-radius: 12px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  -webkit-transform: translateY(10px);
-  -ms-transform: translateY(10px);
-      transform: translateY(10px);
-}
-
-.div-contact-form {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  -webkit-box-shadow: 0px 0px 54px -2px rgba(0, 0, 0, 0.32);
-  box-shadow: 0px 0px 54px -2px rgba(0, 0, 0, 0.32);
-}
-
-.message {
-  text-align: center;
-  width: 70%;
-}
-
-.title-message {
-  width: 100%;
-  font-size: 1.8rem;
-  color: black;
-  padding-top: 35px;
-  font-family: "Red Hat Display", sans-serif;
-}
-
-.title-informations {
-  font-size: 1.7rem;
-  width: 80%;
-  color: white;
-  padding-top: 35px;
-  font-family: "Red Hat Display", sans-serif;
-}
-
-.informations {
-  background-color: #00736d;
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: justify;
-      -ms-flex-align: justify;
-          align-items: justify;
-  text-align: justify;
-}
-
-.text-informations {
-  width: 100%;
-  margin: 5%;
-  font-size: 1.1rem;
-  color: white;
-  font-family: "Red Hat Display", sans-serif;
-}
-
-.logo-informations {
-  width: 80%;
-  margin-left: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.img-informations {
-  padding-right: 5%;
-}
-
-#contact-form {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.form-control {
-  width: 40%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid black;
-  color: black;
-  font-size: 1.4rem;
-  margin-bottom: 16px;
-  margin-top: 5%;
-  font-family: "Roboto", sans-serif;
-}
-
-.submit {
-  width: 21%;
-  background: #00736d;
-  border: none;
-  outline: none;
-  color: black;
-  font-size: 1.2rem;
-  margin-top: 5%;
-  margin-bottom: 16px;
-  border-radius: 2px;
-  cursor: pointer;
-  color: white;
-  font-family: "Red Hat Display", sans-serif;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.submit:hover {
-  background: #009e97;
-}
-
-#message {
-  width: 90%;
-}
-
-input {
-  height: 45px;
-}
-
-::-webkit-input-placeholder {
-  color: rgb(141, 141, 141);
-  opacity: 1;
-}
-
-::-moz-placeholder {
-  color: rgb(141, 141, 141);
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: rgb(141, 141, 141);
-  opacity: 1;
-}
-
-::-ms-input-placeholder {
-  color: rgb(141, 141, 141);
-  opacity: 1;
-}
-
-::placeholder {
-  color: rgb(141, 141, 141);
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  /* Contact section */
-.form-control {
-  width: 80%;
-}
-
-.errorMessage {
-  width: 100%;
-}
-
-.title-section {
-  margin-bottom: 8%;
-}
-
-#contact-form {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#message {
-  width: 80%;
-}
-
-.message {
-  width: 100%;
-}
-
-.informations {
-  width: 100%;
-  height: 500px;
-  text-align: center;
-}
-
-.img-informations {
-  display: none;
-}
-
-.text-informations,
-.logo-informations {
-  margin-left: 0;
-}
-
-.text-informations {
-  font-size: 1.7rem;
-}
-
-.title-informations {
-  text-align: center;
-  font-size: 2rem;
-}
-}
-  }
-      `}</style>
     </React.Fragment>
   )
 }
