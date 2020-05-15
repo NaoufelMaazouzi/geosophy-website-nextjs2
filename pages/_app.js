@@ -4,7 +4,7 @@ import "../styles/styleContact.css";
 import { appWithTranslation } from '../i18n';
 const Noop = ({ children }) => children
 
-
+//DEFINE THE LAYOUT OF ALL PAGES
 class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props

@@ -1,8 +1,7 @@
 require('dotenv').config();
-import nodemailer from "nodemailer"
+import nodemailer from "nodemailer";
 
-//const emailPass = "newworld28"
-
+//CREATE THE TRANSPORTER FOR THE MAIL
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -16,6 +15,7 @@ const transporter = nodemailer.createTransport({
     }
 })
 
+//GET ALL THE FIELDS OF THE MAIL & VERIFY IF THEY ARE NOT EMPTY
 export default async (req, res) => {
     const { name, mail, content, mobile, company } = req.body
 
@@ -25,16 +25,13 @@ export default async (req, res) => {
         return
     }
 
-
-
     const mailerRes = await mailer({ mail, name, text: content, mobile, company })
     res.send(mailerRes)
 }
 
-
+//DEFINE THE STRUCTURE OF THE MAIL & STYLE
 const mailer = ({ mail, name, text, mobile, company }) => {
     const from = name && mail ? `${name} <${mail}>` : `${name || mail}`
-
 
     const message = {
         from: from,

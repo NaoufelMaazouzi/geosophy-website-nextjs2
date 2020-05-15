@@ -140,6 +140,10 @@ function Footer({ t }) {
             }
 
         @media (max-width: 768px) {
+          .div-address {
+            width: 100%;
+          }
+
           .div-social-media {
               width: 100%;
             }

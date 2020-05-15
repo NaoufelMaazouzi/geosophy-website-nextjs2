@@ -16,8 +16,6 @@ import logoLinkedin from '../public/Vector.svg';
 import LayoutEquipe from '../components/layoutEquipe';
 
 
-
-
 function equipePage({ t }) {
   return (
     <React.Fragment>

@@ -12,7 +12,6 @@ import headBand from '../public/Bandeau-Geosophy2.jpg';
 import LayoutGeosophy from '../components/layoutGeosophy';
 
 
-
 function Homepage({ t }) {
   return (
     <React.Fragment>

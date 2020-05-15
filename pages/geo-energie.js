@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { i18n, Link, withTranslation } from '../i18n';
 import imgSchemas from '../public/schémas1.jpg';
 import LayoutGeoenergie from '../components/layoutGeoenergie';
-import { motion } from "framer-motion"
-
 
 
 function geoenergiePage({ t }) {

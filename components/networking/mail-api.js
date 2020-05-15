@@ -1,5 +1,6 @@
-import axios from "axios"
+import axios from "axios";
 
+// SENDCONTACTMAIL FUNCTION
 export const sendContactMail = async (name, mail, content, mobile, company) => {
     const data = {
         name,

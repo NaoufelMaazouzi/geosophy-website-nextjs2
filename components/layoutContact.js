@@ -9,7 +9,6 @@ const LayoutContact = ({ children }) => {
   return (
     <React.Fragment>
       <Head>
-        {/*<link rel="canonical" href="https://example.com" />*/}
         <title>Contact</title>
       </Head>
       <header className="contact">

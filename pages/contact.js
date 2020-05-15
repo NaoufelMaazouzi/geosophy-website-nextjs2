@@ -15,6 +15,7 @@ import logoLinkedin from '../public/linkedin2.svg';
 import logoYoutube from '../public/youtube2.svg';
 import logoTwitter from '../public/twitter2.svg';
 
+//DEFINE EMPTY INITIAL VALUES FOR THE FORM
 let initialValues = {
   name: '',
   email: '',
@@ -23,6 +24,7 @@ let initialValues = {
   message: ''
 }
 
+//GET ALL THE VALUES FILLED IN THE FORM
 const onSubmit = async (values, { resetForm }) => {
   const name = values.name;
   const email = values.email;
@@ -30,6 +32,7 @@ const onSubmit = async (values, { resetForm }) => {
   const mobile = values.mobile;
   const company = values.company;
 
+  //SHOW SUCCES MESSAGE IF OF THE VALUES ARE FILLED IN THE FORM & RESET THEM AT THE END
   if (name && email && formContent && mobile) {
     Swal.fire({
       title: 'Succès !',
@@ -39,9 +42,11 @@ const onSubmit = async (values, { resetForm }) => {
     })
     resetForm({ values: '' })
   }
+  //SEND ALL THE VALUES FILLED TO THE API ROUTE
   const res = await sendContactMail(name, email, formContent, mobile, company)
 }
 
+//DEFINE VALIDATION SCHEMA FOR THE FORM WITH YUP
 const validationSchema = Yup.object({
   name: Yup.string().required('Requis'),
   email: Yup.string().email("Format d'email invalide").required('Requis'),
@@ -52,6 +57,7 @@ const validationSchema = Yup.object({
 
 function contactPage({ t }) {
 
+  //GET ALL THE VALUES FILLED IN THE FORM
   const validation = async values => {
     const name = values.name;
     const email = values.email;
@@ -59,12 +65,13 @@ function contactPage({ t }) {
     const mobile = values.mobile;
     const company = values.company;
 
+    //SHOW FAILED MESSAGE IF OF THE VALUES ARE NOT FILLED IN THE FORM 
     if (!name && !email && !formContent && !mobile && !company) {
       Swal.fire({
         title: 'Raté !',
         text: 'Veuillez remplir les champs nécessaires',
         icon: 'error',
-        confirmButtonText: 'Cool'
+        confirmButtonText: 'Ok'
       })
     }
   }
