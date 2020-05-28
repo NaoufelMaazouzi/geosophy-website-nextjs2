@@ -25,83 +25,51 @@ function equipePage({ t }) {
         </section>
 
         <section className="schemas-section">
-          <div className="div-schemas">
-            <div className="div-img-schemas">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+          <div className="div-schemas" id="div1">
+            <div className="div-img-schemas"><img className="img-schemas" src={require('../public/fondateurs.jpg')} alt="schemas" />
             </div>
             <div className="div-text-schemas">
               <h3 className="title-schemas" id="titleHistory">{t('equipe.titleHistory')}</h3>
-              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-              tempus, convallis
-              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-              Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-                        tempus, convallis</p>
+              <p className="text-schemas">{t('equipe.textHistory')}</p>
             </div>
           </div>
           <div className="div-schemas">
-            <div className="div-img-schemas" id="n2">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            <div className="div-img-schemas" id="n2"><img className="img-schemas" src={require('../public/grand-prix.jpg')} alt="schemas" />
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas" id="titleCulture">{t('equipe.titleCulture')}</h3>
-              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-              tempus, convallis
-              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-              Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-                        tempus, convallis</p>
+              <h3 className="title-schemas" id="titleCulture">{t('equipe.titleMission')}</h3>
+              <p className="text-schemas">{t('equipe.textMission')}</p>
             </div>
-            <div className="div-img-schemas" id="n1">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            <div className="div-img-schemas" id="n1"><img className="img-schemas" src={require('../public/grand-prix.jpg')} alt="schemas" />
             </div>
           </div>
           <div className="div-schemas" id="last-div-schemas">
-            <div className="div-img-schemas">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            <div className="div-img-schemas"><img className="img-schemas" src={require('../public/catacombes.jpg')} alt="schemas" />
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas" id="titleCommunity">{t('equipe.titleCommunity')}</h3>
-              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-              tempus, convallis
-              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-              Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-                        tempus, convallis</p>
+              <h3 className="title-schemas" id="titleCommunity">{t('equipe.titleValeurs')}</h3>
+              <p className="text-schemas">{t('equipe.textValeurs')}</p>
             </div>
           </div>
-
         </section>
 
         <section className="person-section">
           <div className="div-person">
-            <img className="img-person" src={imgPerson} alt="photo Quentin" />
+            <img className="img-person" src={require('../public/Quentin.jpg')} alt="photo Quentin" />
             <p className="person-name">Quentin Barral</p>
             <p className="person-job" id="cto">{t('equipe.cto')}</p>
             <a href="https://www.linkedin.com/in/quentin-barral/" aria-label="linkedin" target="_blank" className="linkedin"><img
               src={logoLinkedin} alt="linkedin" /></a>
           </div>
           <div className="div-person">
-            <img className="img-person" src={imgPerson} alt="photo Alice" />
+            <img className="img-person" src={require('../public/Alice.jpg')} alt="photo Alice" />
             <p className="person-name">Alice Chougnet</p>
             <p className="person-job" id="ceo">{t('equipe.ceo')}</p>
             <a href="https://www.linkedin.com/in/alice-chougnet/" aria-label="linkedin" target="_blank" className="linkedin"><img
               src={logoLinkedin} alt="linkedin" /></a>
           </div>
           <div className="div-person">
-            <img className="img-person" src={imgPerson} alt="photo Louis" />
+            <img className="img-person" src={require('../public/Louis.jpg')} alt="photo Louis" />
             <p className="person-name">Louis Bondaz</p>
             <p className="person-job">Data Scientist</p>
             <a href="https://www.linkedin.com/in/louis-bondaz-bb2835b1/" aria-label="linkedin" target="_blank" className="linkedin"><img
@@ -224,6 +192,10 @@ function equipePage({ t }) {
                 align-items: center;
             }
 
+            #div1 {
+              margin-top: 5%;
+            }
+
             .div-schemas {
             width: 100%;
             height: 100%;
@@ -250,6 +222,8 @@ function equipePage({ t }) {
             width: 100%;
             -o-object-fit: cover;
             object-fit: cover;
+            box-shadow: 0 40px 80px rgba(0,0,0,.15);
+            border-radius: 5px;
             }
 
             .div-text-schemas {
@@ -494,20 +468,6 @@ function equipePage({ t }) {
         .blueButton:hover {
         background-color: #2c92c5;
         }
-        
-
-        @media (max-width: 420px) {
-            /* Presentation section */
-            .div-text-subhead {
-              margin-top: 15%;
-              margin-bottom: 15%;
-            }
-          
-            /* Call to action section */
-            .div-call-action {
-              margin: 5% 5%;
-            }
-          }
 
           @media (max-width: 768px) {
             /* Presentation section */
@@ -541,6 +501,10 @@ function equipePage({ t }) {
       .slider::after {
         width: 100px;
       }
+
+      .img-schemas {
+        box-shadow: 0 20px 40px rgba(0,0,0,.15);
+        }
 
       /* Schémas section */
             .div-img-schemas {
@@ -577,6 +541,23 @@ function equipePage({ t }) {
             .div-person {
                 width: 100%;
             }
+          }
+
+          @media (max-width: 420px) {
+            /* Presentation section */
+            .div-text-subhead {
+              margin-top: 15%;
+              margin-bottom: 15%;
+            }
+          
+            /* Call to action section */
+            .div-call-action {
+              margin: 5% 5%;
+            }
+
+            .img-schemas {
+              box-shadow: 0 10px 20px rgba(0,0,0,.15);
+              }
           }
 
           @media (min-width: 769px) and (max-width: 1150px) {

@@ -31,9 +31,10 @@ function Homepage({ t }) {
           <div className="div-text-subhead">
             <p className="first-text-subhead">{t('main.textLogiciel1')}</p>
             <p className="second-text-subhead">{t('main.textLogiciel2')}</p>
+            <p className="second-text-subhead">{t('main.textLogiciel3')}</p>
           </div>
           <div className="div-call-action">
-            <h3 className="title-call-action">{t('main.analyser')}</h3>
+            <h3 className="title-call-action">{t('main.analyser2')}</h3>
             <a href="https://app.geosophy.io/auth/login" target="_blank" className="button blueButton" aria-label="essai">{t('main.essaiButton')}</a>
           </div>
         </section>
@@ -129,6 +130,7 @@ function Homepage({ t }) {
         
         .headband-section {
           background-image: url(${headBand});
+          box-shadow: 0 10px 20px rgba(0,0,0,.15);
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;

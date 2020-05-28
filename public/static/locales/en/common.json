@@ -7,18 +7,22 @@
     "header": {
         "slogan": "Clean energy at your fingertips.",
         "slogan2": "Right under our feet.",
-        "sloganSubhead": "Reveal the full value of your property"
+        "sloganSubheadGeoenergie": "What is geo-energy?",
+        "sloganSubhead": "Reveal the full value of your property",
+        "sloganSubheadEquipe": "Who are we?"
     },
     "main": {
         "titleIndex1": "Geo-energize your buildings",
         "geoenergisez": "You want to enhance your real estate heritage, master his consumption in ensuring him a local supply for thermal comfort or support your customers in this process?",
-        "geoenergisez2": "Whether you are a project developer or building owner, company or community, take advantage of the low-carbon energy of your basement: geo-energy.",
+        "geoenergisez2": "Whether you are a project developer or building owner, public or private actor, take advantage of the low-carbon energy of your basement: geo-energy.",
         "headbandHook": "Renewable, local and low-carbon energy for resilient buildings.",
         "titleIndex2": "Evaluate your geo-energy capital",
-        "textLogiciel1": "To boost your project and identify the most promising sites, Geosophy offers you its simulation software.",
-        "textLogiciel2": "From a single address, it determines the available underground resources for each location, links them to the needs of the building and the possibility of drilling.It then calculates energy revenues, investment costs as well as the property valuation of geo-energy installations.",
+        "textLogiciel1": "To boost your project and identify the most promising sites, we offer our simulation tools.",
+        "textLogiciel2": "From a single address, we determine the available underground resources for each site, we link them to the needs of the building and the possibility of drilling; we then calculate the energy revenues, the investment costs as well as the property valuation of the geo-energy installations.",
+        "textLogiciel3": "A dedicated web space allows you to view each result and identify your projects with the highest potential in order to unite your stakeholders. Then, whether you want to invest or have your project funded, Geosophy supports you in your efforts with key players in the sector.",
         "confianceTitle": "They trust us!",
         "analyser": "Do you want to analyze your property for free?",
+        "analyser2": "So, to lay the first stone of your project to develop low-carbon underground resources, it is here:",
         "essaiButton": "Free try"
     },
     "contact": {
@@ -36,10 +40,13 @@
     "equipe": {
         "equipeTitle": "The geosophy team",
         "titleHistory": "Our history",
-        "titleCulture": "Our culture",
-        "titleCommunity": "Our community",
-        "cto": "CTO and physicist",
-        "ceo": "CEO and physicist",
+        "textHistory": "We are two founders from the petroleum sector, who want to reuse our skills and the tools developed in this sector for that of renewable energies.",
+        "titleMission": "Our mission",
+        "textMission": "Our mission is to scale up the use of geo-energy wherever it is possible to do so responsibly.",
+        "titleValeurs": "Our values",
+        "textValeurs": "Geosophy is a company sincere in its commitment. Collective intelligence combines with everyone's development.",
+        "cto": "Co-founder and CTO",
+        "ceo": "Co-founder and CTO",
         "question": "A question? Do not hesitate to contact us!",
         "soutien": "They support us!"
     },
@@ -47,9 +54,18 @@
         "droits": "All rights reserved"
     },
     "geo-energie": {
-        "geoenergieTitle": "Geo-energy",
-        "geoPresentation": "Geo-energy for heating or cooling buildings is renewable energy available locally, all the time, intermittently and usable with a small footprint!",
-        "analyser": "Do you want to analyze your property for free?",
-        "essaiButton": "Free try"
+        "geoenergieTitle": "Local, low-carbon energy",
+        "geoPresentation": "Geo-energy for heating or cooling buildings is renewable energy available locally, all the time, without intermittence and usable with a small footprint. This consists in going to draw in the ground, underground, the coolness in summer or the heat in winter. We thus use the property of the basement to keep a constant temperature of around 12-15 ° C all year round, below a depth of 5 m and up to a few tens of meters.",
+        "geoPresentation2": "Geo-energy is sometimes called « geothermal energy of minimal importance », but even if it is discreet, its potential is nonetheless very important!",
+        "analyser": "Do you want to analyze the geo-energy potential of your property?",
+        "essaiButton": "Free try",
+        "titleNappe": "Groundwater table",
+        "textNappe": "If there is a sheet of water under the building, we produce this water with a well and then reinject it with another. This solution is possible in dense areas, you can even drill from inside the building.",
+        "titleSonde": "Underground probe",
+        "textSonde": "If there is no water, we build « probes » in which we circulate a fluid in a closed loop.",
+        "titlePompe": "Heat pump",
+        "textPompe": "Starting from the temperature of the basement to heat or cool a building using a heat pump allows you to use it much more optimally than if you start from the outside air as for most conventional air conditioners. This free preheating or pre-cooling in fact allows consumption to be divided by four or five.",
+        "titleFreecooling": "Free cooling",
+        "textFreecooling": "For the cooling of buildings, it is even possible when the installations in the building allow it, those having radiant ceilings or floors, to obtain thanks to the basement twenty times more energy than the installation does requires: this is called “free cooling”, when a fluid is circulated directly at the temperature of the basement, without the use of a heat pump."
     }
 }

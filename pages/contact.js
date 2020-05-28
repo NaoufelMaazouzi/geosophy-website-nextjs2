@@ -81,7 +81,6 @@ function contactPage({ t }) {
     <React.Fragment>
       <main>
         <section id="contact-section">
-          <h2 className="title-section" id="title-cyan">{t('contact.question')}</h2>
           <div className="div-contact-form">
             <div className="message">
               <h4 className="title-message">{t('contact.envoiMessage')}</h4>

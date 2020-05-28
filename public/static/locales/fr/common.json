@@ -1,24 +1,28 @@
 {
     "navbar": {
         "geoenergie": "Géo-énergie",
-        "equipe": "Equipe",
+        "equipe": "Équipe",
         "connexion": "Connexion"
     },
     "header": {
         "slogan": "L'énergie propre à portée de main.",
         "slogan2": "Juste sous nos pieds.",
-        "sloganSubhead": "Révélez toute la valeur de votre foncier"
+        "sloganSubheadGeoenergie": "Qu’est-ce que la géo-énergie ?",
+        "sloganSubhead": "Révélez toute la valeur de votre foncier",
+        "sloganSubheadEquipe": "Qui sommes-nous ?"
     },
     "main": {
         "titleIndex1": "Géo-énergisez vos bâtiments",
         "geoenergisez": "Vous souhaitez valoriser votre patrimoine immobilier, maîtriser sa consommation en lui assurant un approvisionnement local pour son confort thermique ou accompagner vos clients dans cette démarche ?",
-        "geoenergisez2": "Que vous soyez développeur de projet ou propriétaire de bâtiment, entreprise ou collectivité, mettez à profit l’énergie décarbonée de votre sous-sol : la géo-énergie.",
+        "geoenergisez2": "Que vous soyez développeur de projet ou propriétaire de bâtiment, acteur public ou privé, mettez à profit l’énergie décarbonée de votre sous-sol : la géo-énergie.",
         "headbandHook": "Une énergie renouvelable, locale et décarbonée pour des bâtiments résilients.",
         "titleIndex2": "Evaluez votre capital géo-énergétique",
-        "textLogiciel1": "Pour booster votre projet et identifier les sites les plus prometteurs, Geosophy vous propose son logiciel de simulation.",
-        "textLogiciel2": "À partir d’une simple adresse, il détermine pour chaque localisation les ressources souterraines disponibles, les met en lien avec les besoins du bâtiment et la possibilité de forer. Il calcule ensuite les revenus énergétiques, les coûts d’investissement ainsi que la valorisation immobilière des installations géo-énergétiques.",
+        "textLogiciel1": "Pour booster votre projet et identifier les sites les plus prometteurs, nous vous proposons nos outils de simulation. ",
+        "textLogiciel2": "À partir d’une simple adresse, nous déterminons pour chaque site les ressources souterraines disponibles, nous les mettons en lien avec les besoins du bâtiment et la possibilité de forer ; nous calculons ensuite les revenus énergétiques, les coûts d’investissement ainsi que la valorisation immobilière des installations géo-énergétiques.",
+        "textLogiciel3": "Un espace Web dédié vous permet de visionner chaque résultat et d’identifier vos projets à plus fort potentiel afin de fédérer vos parties prenantes. Ensuite, que vous souhaitiez investir ou faire financer votre projet, Geosophy vous accompagne dans vos démarches avec des acteurs de référence du secteur.",
         "confianceTitle": "Ils nous font confiance !",
         "analyser": "Vous voulez analyser votre foncier gratuitement ?",
+        "analyser2": "Alors, pour poser la première pierre de votre projet de valorisation de ressources souterraines décarbonées, c’est par ici :",
         "essaiButton": "Essai gratuit"
     },
     "contact": {
@@ -37,19 +41,31 @@
         "question": "Une question ? N'hésitez pas à nous contacter !",
         "equipeTitle": "L'équipe Geosophy",
         "titleHistory": "Notre histoire",
-        "titleCulture": "Notre culture",
-        "titleCommunity": "Notre communauté",
-        "cto": "CTO et physicien",
-        "ceo": "CEO et physicienne",
-        "soutien": "Ils nous soutiennet !"
+        "textHistory": "Nous sommes deux fondateurs issus du secteur pétrolier, qui avons la volonté de réutiliser nos compétences et les outils développés dans ce secteur pour celui des énergies renouvelables.",
+        "titleMission": "Notre mission",
+        "textMission": "La mission que nous nous sommes fixés est de massifier l’utilisation de la géo-énergie partout où il est possible de le faire de façon responsable.",
+        "titleValeurs": "Nos valeurs",
+        "textValeurs": "Geosophy est une entreprise sincère dans son engagement. L’intelligence collective s’y conjugue avec le développement de chacun.",
+        "cto": "Cofondateur et CTO",
+        "ceo": "Cofondatrice et CTO",
+        "soutien": "Ils nous soutiennent !"
     },
     "footer": {
         "droits": "Tous droits réservés"
     },
     "geo-energie": {
-        "geoenergieTitle": "Géo-énergie",
-        "geoPresentation": "La géo-énergie pour le chauffage ou la climatisation des bâtiments est une énergie renouvelable disponible localement, tout le temps, sans intermittence et exploitable avec une faible empreinte au sol !",
-        "analyser": "Vous voulez analyser votre foncier gratuitement ?",
-        "essaiButton": "Essai gratuit"
+        "geoenergieTitle": "Une énergie locale et décarbonée",
+        "geoPresentation": "La géo-énergie pour le chauffage ou la climatisation des bâtiments est une énergie renouvelable disponible localement, tout le temps, sans intermittence et exploitable avec une faible empreinte au sol. Cela consiste à aller puiser dans le sol, sous terre, la fraîcheur en été ou la chaleur en hiver. On utilise ainsi la propriété du sous-sol de conserver une température constante d’environ 12-15°C toute l’année, en dessous d’une profondeur de 5 m et jusqu’à quelques dizaines de mètres.",
+        "geoPresentation2": "La géo-énergie est parfois appelée « géothermie de minime importance », mais même si elle est discrète, son potentiel n’en est pas moins très important !",
+        "analyser": "Vous voulez analyser le potentiel géo-énergétique de votre foncier ?",
+        "essaiButton": "Essai gratuit",
+        "titleNappe": "Nappe d'eau souterraine",
+        "textNappe": "S’il y a une nappe d’eau sous le bâtiment, on produit cette eau avec un puits puis on la réinjecte avec un autre. Cette solution est possible en zone dense, on peut même forer de l’intérieur du bâtiment.",
+        "titleSonde": "Sonde souterraine",
+        "textSonde": "S’il n’y a pas d’eau, on construit des « sondes » dans lesquels on fait circuler un fluide en boucle fermée.",
+        "titlePompe": "Pompe à chaleur",
+        "textPompe": "Partir de la température  du sous-sol pour réchauffer ou rafraîchir un bâtiment à l’aide d’une pompe à chaleur permet d’utiliser celle-ci de façon bien plus optimale que si l’on part de l’air extérieur comme pour la plupart des climatiseurs classiques. Ce préchauffage ou pré-rafraîchissement gratuit permet en effet de diviser la consommation par quatre ou cinq.",
+        "titleFreecooling": "Free cooling",
+        "textFreecooling": "Pour le rafraîchissement des bâtiments, il est même possible quand les installations dans le bâtiment le permettent, ceux-ci disposant de plafonds ou planchers rayonnants, d’obtenir grâce au sous-sol vingt fois plus d’énergie que l’installation n’en nécessite : on parle alors de « free cooling », quand on fait directement circuler un fluide à la température du sous-sol, sans utilisation de pompe à chaleur."
     }
 }

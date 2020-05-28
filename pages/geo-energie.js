@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { i18n, Link, withTranslation } from '../i18n';
-import imgSchemas from '../public/schémas1.jpg';
 import LayoutGeoenergie from '../components/layoutGeoenergie';
 
 
@@ -13,65 +12,45 @@ function geoenergiePage({ t }) {
           <h2 className="title-section" id="title-green">{t('geo-energie.geoenergieTitle')}</h2>
           <div className="div-text-subhead">
             <p className="first-text-subhead" id="geoPresentation">{t('geo-energie.geoPresentation')}</p>
+            <p className="second-text-subhead" id="geoPresentation">{t('geo-energie.geoPresentation2')}</p>
           </div>
         </section>
 
         <section className="schemas-section">
           <div className="div-schemas">
-            <div className="div-img-schemas">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={require('../public/schémas1.jpg')} alt="schemas" /></a>
+            <div className="div-img-schemas"><img className="img-schemas" src={require('../public/nappe.png')} alt="schemas" />
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas">Lorem ipsum</h3>
-              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-              tempus, convallis
-              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-              Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-                        tempus, convallis</p>
+              <h3 className="title-schemas">{t('geo-energie.titleNappe')}</h3>
+              <p className="text-schemas">{t('geo-energie.textNappe')}</p>
             </div>
           </div>
           <div className="div-schemas">
-            <div className="div-img-schemas" id="n2">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            <div className="div-img-schemas" id="n2"><img className="img-schemas" src={require('../public/sondes.png')} alt="schemas" />
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas">Lorem ipsum</h3>
-              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-              tempus, convallis
-              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-              Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-                        tempus, convallis</p>
+              <h3 className="title-schemas">{t('geo-energie.titleSonde')}</h3>
+              <p className="text-schemas">{t('geo-energie.textSonde')}</p>
             </div>
-            <div className="div-img-schemas" id="n1">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            <div className="div-img-schemas" id="n1"><img className="img-schemas" src={require('../public/sondes.png')} alt="schemas" />
             </div>
           </div>
           <div className="div-schemas" id="last-div-schemas">
-            <div className="div-img-schemas">
-              <a href="#" aria-label="schemas"><img className="img-schemas" src={imgSchemas} alt="schemas" /></a>
+            <div className="div-img-schemas"><img className="img-schemas" src={require('../public/pac.png')} alt="schemas" />
             </div>
             <div className="div-text-schemas">
-              <h3 className="title-schemas">Lorem ipsum</h3>
-              <p className="text-schemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien
-              tempus, convallis
-              nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor. Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-              tempus, convallis. nisi ut, sollicitudin justo. Sed non tellus in lacus sollicitudin porttitor.
-              Sed non tellus in
-              lacus sollicitudin porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              sed sapien
-                        tempus, convallis</p>
+              <h3 className="title-schemas">{t('geo-energie.titlePompe')}</h3>
+              <p className="text-schemas">{t('geo-energie.textPompe')}</p>
+            </div>
+          </div>
+          <div className="div-schemas">
+            <div className="div-img-schemas" id="n2"><img className="img-schemas" src={require('../public/free_cooling.png')} alt="schemas" />
+            </div>
+            <div className="div-text-schemas">
+              <h3 className="title-schemas">{t('geo-energie.titleFreecooling')}</h3>
+              <p className="text-schemas">{t('geo-energie.textFreecooling')}</p>
+            </div>
+            <div className="div-img-schemas" id="n1"><img className="img-schemas" src={require('../public/free_cooling.png')} alt="schemas" />
             </div>
           </div>
           <div className="div-call-action">
@@ -273,10 +252,6 @@ function geoenergiePage({ t }) {
         color: #4a4a4a;
         font-family: "Roboto", sans-serif;
         font-weight: 300;
-        }
-
-        #last-div-schemas {
-        margin-bottom: 10%;
         }
 
         #n2 {

@@ -34,7 +34,7 @@ function Navbar({ t, linkId1, linkId2, linkId3 }) {
       </nav>
       <div className="div-slogan">
         <h2 className="slogan">{t('header.slogan')}<br />{t('header.slogan2')}</h2>
-        <h4 className="slogan-subhead">{t('header.sloganSubhead')}</h4>
+        <h4 className="slogan-subhead">{linkId1 ? t('header.sloganSubhead') : linkId2 ? t('header.sloganSubheadGeoenergie') : linkId3 ? t('header.sloganSubheadEquipe') : t('contact.question')}</h4>
         <a href="#presentation-section" aria-label="scroll"><span className="scroll-down"></span></a>
       </div>
       <style jsx>{`

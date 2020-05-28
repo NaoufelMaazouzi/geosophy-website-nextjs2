@@ -14,7 +14,7 @@ const LayoutGeosophy = ({ children }) => {
         <title>Geosophy</title>
       </Head>
       <header className="geosophy">
-        <Navbar linkId1="link" />
+        <Navbar linkId1="link" slogan="header.slogan2Geoenergie" />
       </header>
       {children}
       <Footer />
