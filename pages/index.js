@@ -8,7 +8,7 @@ import logoUnion from '../public/Union-Investment.png';
 import logoLamotte from '../public/lamotte.png';
 import logoCovea from '../public/covea.png';
 import logoFrancaise from '../public/La-Francaise-logo.png';
-import headBand from '../public/Bandeau-Geosophy2.jpg';
+import headBand from '../public/sol.jpg';
 import LayoutGeosophy from '../components/layoutGeosophy';
 
 
@@ -19,8 +19,7 @@ function Homepage({ t }) {
         <section id="presentation-section">
           <h2 className="title-section">{t('main.titleIndex1')}</h2>
           <div className="div-text-subhead">
-            <p className="first-text-subhead">{t('main.geoenergisez')}</p>
-            <p className="second-text-subhead">{t('main.geoenergisez2')}</p>
+            <p className="first-text-subhead">{t('main.geoenergisez')}<a href="#" className="linkText">{t('main.hrefGeoenergie')}</a></p>
           </div>
         </section>
         <section className="headband-section">
@@ -30,8 +29,7 @@ function Homepage({ t }) {
           <h2 className="title-section">{t('main.titleIndex2')}</h2>
           <div className="div-text-subhead">
             <p className="first-text-subhead">{t('main.textLogiciel1')}</p>
-            <p className="second-text-subhead">{t('main.textLogiciel2')}</p>
-            <p className="second-text-subhead">{t('main.textLogiciel3')}</p>
+            <p className="second-text-subhead"><a href="#" className="linkText">{t('main.espaceWeb')}</a>{t('main.textLogiciel3')}</p>
           </div>
           <div className="div-call-action">
             <h3 className="title-call-action">{t('main.analyser2')}</h3>
@@ -125,6 +123,12 @@ function Homepage({ t }) {
         .second-text-subhead {
           margin-top: 5%;
         }
+
+        .linkText {
+          text-decoration: none;
+          color: #429BE7;
+          font-size: 1.3rem;
+        }
         
         /***************************************** HEADBAND SECTION*****************************************/
         
@@ -180,7 +184,7 @@ function Homepage({ t }) {
         .div-call-action {
           text-align: center;
           width: 80%;
-          margin-top: 5%;
+          margin-top: 2%;
         }
         
         .title-call-action {
@@ -341,7 +345,7 @@ function Homepage({ t }) {
       @media (max-width: 768px) { 
           /* Presentation section */
       .first-text-subhead,
-      .second-text-subhead {
+      .second-text-subhead, .linkText {
         font-size: 2.4rem;
         text-align: justify;
       }

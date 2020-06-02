@@ -230,7 +230,7 @@ function geoenergiePage({ t }) {
         }
 
         .img-schemas {
-        width: 100%;
+        width: 70%;
         -o-object-fit: cover;
         object-fit: cover;
         }

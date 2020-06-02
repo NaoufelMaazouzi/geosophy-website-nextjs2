@@ -109,7 +109,6 @@ function contactPage({ t }) {
               <h4 className="title-informations">{t('contact.informationsTitle')}</h4>
               <p className="text-informations"><img src={logoPosition} className="img-informations" alt="position" />155 Boulevard de
                     l'Hôpital, 75013 Paris</p>
-              <p className="text-informations"><img src={logoTel} className="img-informations" alt="telephone" />06 26 78 42 14</p>
               <p className="text-informations"><img src={logoMail} className="img-informations" alt="mail" />contact@geosophy.io</p>
               <div className="logo-informations">
                 <a href="https://www.linkedin.com/company/geosophy-io/" aria-label="linkedin" target="_blank"><img
