@@ -19,7 +19,11 @@ function Homepage({ t }) {
         <section id="presentation-section">
           <h2 className="title-section">{t('main.titleIndex1')}</h2>
           <div className="div-text-subhead">
-            <p className="first-text-subhead">{t('main.geoenergisez')}<a href="#" className="linkText">{t('main.hrefGeoenergie')}</a></p>
+            <p className="first-text-subhead">{t('main.geoenergisez')}
+              <Link href="/geo-energie">
+                <a href="#" className="linkText">{t('main.hrefGeoenergie')}</a>
+              </Link>
+            </p>
           </div>
         </section>
         <section className="headband-section">
@@ -29,7 +33,7 @@ function Homepage({ t }) {
           <h2 className="title-section">{t('main.titleIndex2')}</h2>
           <div className="div-text-subhead">
             <p className="first-text-subhead">{t('main.textLogiciel1')}</p>
-            <p className="second-text-subhead"><a href="#" className="linkText">{t('main.espaceWeb')}</a>{t('main.textLogiciel3')}</p>
+            <p className="second-text-subhead"><a href="https://app.geosophy.io/auth/login" target="_blank" className="linkText" aria-label="lien" className="linkText">{t('main.espaceWeb')}</a>{t('main.textLogiciel3')}</p>
           </div>
           <div className="div-call-action">
             <h3 className="title-call-action">{t('main.analyser2')}</h3>
